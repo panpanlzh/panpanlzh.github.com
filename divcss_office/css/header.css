@@ -1,0 +1,65 @@
+#header{
+    margin:0 auto;
+    width:1280px;
+    height:96px;
+    background:#61a3f0;
+}
+#header .logo{
+    margin-left:22px;
+    display:inline;
+}
+#header .nav{
+    margin-right:20px;
+    display:inline;
+    padding-top:30px;
+    height:66px;
+    line-height:66px;
+}
+#header .nav li{
+    float:left;
+}
+#header .nav li.tips{
+    position: relative;
+}
+#header .nav a{
+    display:block;
+    height:68px;
+    width:80px;
+    color:#fff;
+    font-size:14px;
+    float:left;
+    text-align:center;
+    font:12px "microsoft yahei";
+    cursor: pointer;
+}
+#header a span{
+    display: block;
+    width: 80px;
+    height:43px;
+}
+#header span.home{
+    background:url("../images/nav.png") no-repeat center 0;
+}
+#header span.set{
+     background:url("../images/nav.png") no-repeat center  -136px;
+ }
+#header span.logout{
+    background:url("../images/nav.png") no-repeat center  -204px;
+}
+#header span.event{
+    background:url("../images/nav.png") no-repeat  center -68px;
+}
+#header li.tips cite{
+    background:url("../images/tips.png") no-repeat center center;
+    position:absolute;
+    right:0px;
+    top:-20px;
+    display:block;
+    height:26px;
+    line-height:26px;
+    text-align:center;
+    width:40px;
+    color: #fff;
+}
+
+
