@@ -4,6 +4,7 @@ body{
 .mainContent{
     margin:14px auto;
     width:1280px;
+    border:1px solid red;
 }
 
 /*左侧----开始*/

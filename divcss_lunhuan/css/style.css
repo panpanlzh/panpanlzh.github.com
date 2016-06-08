@@ -21,13 +21,16 @@ a{
 .right{
     float:right;
 }
+.clearfix{
+    *zoom:1;
+}
 
-.clearfix:after{
-    content:'';
-    font-size:0;
-    display:block;
-    height:0;
-    width:100%;
-    visibility:hidden;
+.clearfix:after,.clearfix:before{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
     clear: both;
+    height: 0;
+    width:100%;
 }
