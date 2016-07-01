@@ -25,6 +25,7 @@ a{
 .clearfix{
     *zoom:1;
 }
+
 .clearfix:after {
     visibility: hidden;
     display: block;
