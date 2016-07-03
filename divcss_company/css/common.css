@@ -1,0 +1,129 @@
+/*全局样式*/
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    font:14px "'Microsoft YaHei', Arial, 'MicrosoftJhengHei', sans-serif";
+}
+a{
+    text-decoration: none;
+}
+ol,ul,li{
+    list-style: none;
+}
+img{
+    border: 0;
+    vertical-align: top;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    /*border: 1px solid #000;*/
+}
+.left{
+    float:left;
+}
+.right{
+    float: right;
+}
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+
+.clearfix{
+    *zoom:1;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    width:100%;
+}
+
+/*头部样式*/
+.header{
+    margin: 10px auto 20px
+}
+.header nav{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.header nav a{
+    color: #777272;
+}
+.header h1{
+    display: inline-block;
+    margin-left: 30px;
+    width: 718px;
+    vertical-align: middle;
+}
+.header form{
+    display: inline-block;
+    vertical-align: middle;
+}
+.header input[type="text"] {
+    height: 28px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+.header input[type="submit"] {
+    width: 45px;
+    height: 24px;
+    margin-left: 5px;
+    background: #2E8CF1;
+    color: #fff;
+    border: none;
+}
+
+
+/*导航样式*/
+.nav{
+    /*width: 100%;*/
+}
+.nav ul{
+    height: 38px;
+    line-height:38px;
+    background: #2E8CF1;
+}
+.nav ul li{
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 138px;
+    /*padding: 0 34px;*/
+    border-right: 1px solid #fff;
+    -webkit-transition: background 1s linear;
+}
+.nav ul li:last-child{
+    border: none;
+    /*padding:0 46px;*/
+}
+.nav ul li:hover{
+    background: #265d96;
+}
+.nav ul li.on{
+    background: #265d96;
+}
+.nav ul li a{
+    color: #fff;
+}
+.nav div.subNav a{
+    background: #265d96;
+    display: block;
+    width: 138px;
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #fff;
+}
+
+
+

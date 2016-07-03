@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div class="container header">
+    <header>
+        <nav>
+            <a href="index.html">返回首页</a> | <a href="#">设为首页</a> | <a href="#">加入收藏</a> | <a href="#">联系我们</a>
+        </nav>
+        <h1><a href="index.html"><img src="images/logo.jpg"></a></h1>
+        <form>
+            <input type="text" placeholder="请输入搜索关键词"><input type="submit" value="搜索">
+        </form>
+    </header>
+</div>
+<div class="container nav">
+    <nav>
+        <ul>
+            <li class="on"><a href="#">关于飞跃</a></li>
+            <li><a href="#">集团新闻</a>
+                <div class="subNav hidden">
+                    <a href="#">集团新闻</a>
+                    <a href="#">行业资讯</a>
+                    <a href="#">企业文化</a>
+                </div>
+            </li>
+            <li><a href="#">飞跃产业</a></li>
+            <li><a href="#">研发创新</a></li>
+            <li><a href="#">销售与服务</a></li>
+            <li><a href="#">人才招聘</a></li>
+            <li><a href="#">飞跃责任</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".nav li:eq(1)").hover(function(){
+            $(".subNav").slideToggle(1000);
+        })
+    });
+</script>
+</body>
+</html>
