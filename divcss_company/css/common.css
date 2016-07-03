@@ -87,6 +87,7 @@ img{
 /*导航样式*/
 .nav{
     /*width: 100%;*/
+    margin-top: 20px;
 }
 .nav ul{
     height: 38px;
@@ -99,13 +100,12 @@ img{
     font-size: 16px;
     font-weight: bold;
     width: 138px;
-    /*padding: 0 34px;*/
     border-right: 1px solid #fff;
     -webkit-transition: background 1s linear;
 }
 .nav ul li:last-child{
     border: none;
-    /*padding:0 46px;*/
+    width: 166px;
 }
 .nav ul li:hover{
     background: #265d96;
