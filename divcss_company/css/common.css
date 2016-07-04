@@ -4,10 +4,11 @@
     padding: 0;
 }
 body{
-    font:14px "'Microsoft YaHei', Arial, 'MicrosoftJhengHei', sans-serif";
+    font: 14px '微软雅黑', 'Arial','MicrosoftJhengHei', 'sans-serif' ;
 }
 a{
     text-decoration: none;
+    color: #fff;
 }
 ol,ul,li{
     list-style: none;
@@ -17,7 +18,7 @@ img{
     vertical-align: top;
 }
 .container{
-    width: 1000px;
+    width: 1100px;
     margin: 0 auto;
     /*border: 1px solid #000;*/
 }
@@ -61,7 +62,7 @@ img{
 .header h1{
     display: inline-block;
     margin-left: 30px;
-    width: 718px;
+    width: 710px;
     vertical-align: middle;
 }
 .header form{
@@ -79,8 +80,8 @@ img{
     height: 24px;
     margin-left: 5px;
     background: #2E8CF1;
-    color: #fff;
     border: none;
+    color: #fff;
 }
 
 
@@ -94,6 +95,9 @@ img{
     line-height:38px;
     background: #2E8CF1;
 }
+.nav ul a{
+    color: #fff;
+}
 .nav ul li{
     float: left;
     text-align: center;
@@ -102,6 +106,13 @@ img{
     width: 138px;
     border-right: 1px solid #fff;
     -webkit-transition: background 1s linear;
+    -moz-transition: background 1s linear;
+    -ms-transition: background 1s linear;
+    -o-transition: background 1s linear;
+    transition: background 1s linear;
+}
+.nav ul li:nth-child(2){
+    position: relative;
 }
 .nav ul li:last-child{
     border: none;
@@ -113,9 +124,10 @@ img{
 .nav ul li.on{
     background: #265d96;
 }
-.nav ul li a{
-    color: #fff;
+.nav div.subNav{
+    position: absolute;
 }
+
 .nav div.subNav a{
     background: #265d96;
     display: block;
