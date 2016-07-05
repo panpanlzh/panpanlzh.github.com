@@ -151,9 +151,90 @@ img{
     border-bottom: 1px solid #fff;
 }
 
+
+/*计数新闻列表*/
+.newlist2 li{
+    /*counter-reset: cactive;*/
+    margin-left: 5px;
+    counter-increment: cative;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.newlist2 li:before{
+    content: counter(cative);
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: #26260b;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    margin-right: 5px;
+}
+.newlist2 li:nth-child(1):before,.newlist2 li:nth-child(2):before,.newlist2 li:nth-child(3):before{
+    background: #2E8CF1;
+}
+.newlist2 li a{
+    color: #000;
+}
+.newlist2 li a:hover{
+    text-shadow: 3px 3px 3px #000;
+}
+
+.leftWraper{
+    width: 740px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+/*右侧信息展示*/
+.rightWraper{
+    width: 345px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}
+.rightWraper .contactus p,.rightWraper .contactus img{
+    width: 346px;
+    height: 200px;
+}
+.rightWraper .subcompany li{
+    height: 81px;
+    line-height: 81px;
+}
+.rightWraper .subcompany img{
+    width: 126px;
+    height: 72px;
+    float: left;
+    margin-right: 8px;
+}
+.rightWraper .subcompany p{
+    color: #000;
+}
+
+/*分页*/
+.page{
+    margin-top: 15px;
+    text-align: center;
+}
+.page a{
+    color: #fff;
+    padding: 2px 10px;
+    background: #2E8CF1;
+}
+.page a:hover{
+    background: #265d96;
+}
+.page a.on{
+    background: #265d96;
+}
+
+
 /*底部区域*/
 .footer{
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 20px 0px;
     background: #2E8CF1;
     text-align: center;
