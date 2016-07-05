@@ -1,0 +1,118 @@
+/*轮播图*/
+.Carousel,.Carousel img {
+    width: 740px;
+    height: 313px;
+}
+
+/*公用栏目标题*/
+.leftWraper section{
+    width: 740px;
+}
+
+/*左侧-集团新闻列表*/
+.leftWraper section.newsList li{
+    margin: 10px 0;
+    height: 196px;
+    background: #2E8CF1;
+    position: relative;
+}
+
+.leftWraper section.newsList ul a.newsImg
+{
+    float: left;
+    width: 330px;
+    height: 196px;
+    margin-right: 15px;
+}
+.leftWraper section.newsList ul a.newsImg img{
+    width: 330px;
+    height: 196px;
+}
+.leftWraper section.newsList ul h3{
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+}
+.leftWraper section.newsList ul p{
+    font-size: 13px;
+    overflow: hidden;
+    height: 143px;
+    line-height: 20px;
+    padding-right: 5px;
+}
+.leftWraper section.newsList ul span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    border-radius:5px;
+    background: #2E8CF1;
+    position: absolute;
+    left: 321px;
+    top: 20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*左侧-公司活动列表*/
+.leftWraper div.active_a{
+    text-align: center;
+}
+.leftWraper div.active_a a,.leftWraper div.active_a img{
+    width: 180px;
+    height: 136px;
+}
+
+.leftWraper div.active_b ul,.leftWraper div.active_b div
+{
+    display: inline-block;
+    vertical-align: top;
+}
+.leftWraper div.active_b ul{
+    width: 540px;
+    margin-right: 10px;
+}
+.leftWraper div.active_b li{
+    /*counter-reset: cactive;*/
+    margin-left: 5px;
+    counter-increment: cative;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.leftWraper div.active_b li:before{
+    content: counter(cative);
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: #26260b;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    margin-right: 5px;
+}
+.leftWraper div.active_b li:nth-child(1):before,.leftWraper div.active_b li:nth-child(2):before,.leftWraper div.active_b li:nth-child(3):before{
+    background: #2E8CF1;
+}
+.leftWraper div.active_b li a{
+    color: #000;
+}
+.leftWraper div.active_b li a:hover{
+    text-shadow: 3px 3px 3px #000;
+}
+
+.leftWraper div.active_b div a,.leftWraper div.active_b div img{
+    width: 180px;
+    height: 142px;
+    display: block;
+    margin-top: 9px;
+}
+
+
+
