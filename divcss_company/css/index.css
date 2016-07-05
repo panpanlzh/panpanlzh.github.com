@@ -5,8 +5,11 @@
 }
 
 /*公用栏目标题*/
-.leftWraper section{
+.leftWraper{
     width: 740px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
 }
 
 /*左侧-集团新闻列表*/
@@ -78,7 +81,7 @@
     width: 540px;
     margin-right: 10px;
 }
-.leftWraper div.active_b li{
+.newlist2 li{
     /*counter-reset: cactive;*/
     margin-left: 5px;
     counter-increment: cative;
@@ -86,7 +89,7 @@
     line-height: 30px;
     overflow: hidden;
 }
-.leftWraper div.active_b li:before{
+.newlist2 li:before{
     content: counter(cative);
     width: 20px;
     height: 20px;
@@ -97,13 +100,13 @@
     text-align: center;
     margin-right: 5px;
 }
-.leftWraper div.active_b li:nth-child(1):before,.leftWraper div.active_b li:nth-child(2):before,.leftWraper div.active_b li:nth-child(3):before{
+.newlist2 li:nth-child(1):before,.newlist2 li:nth-child(2):before,.newlist2 li:nth-child(3):before{
     background: #2E8CF1;
 }
-.leftWraper div.active_b li a{
+.newlist2 li a{
     color: #000;
 }
-.leftWraper div.active_b li a:hover{
+.newlist2 li a:hover{
     text-shadow: 3px 3px 3px #000;
 }
 
@@ -113,6 +116,32 @@
     display: block;
     margin-top: 9px;
 }
+
+/*右侧信息展示*/
+.rightWraper{
+    width: 345px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+}
+.rightWraper .contactus p,.rightWraper .contactus img{
+    width: 346px;
+    height: 200px;
+}
+.rightWraper .subcompany li{
+    height: 81px;
+    line-height: 81px;
+}
+.rightWraper .subcompany img{
+    width: 126px;
+    height: 72px;
+    float: left;
+    margin-right: 8px;
+}
+.rightWraper .subcompany p{
+    color: #000;
+}
+
 
 
 
