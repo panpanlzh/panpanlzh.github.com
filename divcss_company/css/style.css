@@ -141,6 +141,7 @@ header,nav,article,section,aside,footer{display:block;}
 }
 .nav div.subNav{
     position: absolute;
+    z-index: 999;
 }
 
 .nav div.subNav a{
@@ -248,7 +249,12 @@ header,nav,article,section,aside,footer{display:block;}
 .footer a:last-child{
     border:0;
 }
-
+small.remind{
+    color: red;
+    padding-left: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
 
 
 

@@ -69,6 +69,12 @@ body{
 .leftContent .subMenu{
     background:#fff;
 }
+.leftContent .open .subMenu{
+    display: block;
+}
+.leftContent .close .subMenu{
+    display: none;
+}
 .leftContent .subMenu li{
     border-bottom:1px solid #b3c5d9;
     height:38px;
@@ -249,3 +255,9 @@ body{
 /*右侧内容---新闻列表---结束*/
 
 /*右侧内容------结束*/
+
+small.remind{
+    color: red;
+    padding-left: 3px;
+    font-size: 12px;
+}

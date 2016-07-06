@@ -38,11 +38,16 @@
             <ul>
                 <li><a href="#">个人办公</a></li>
                 <li class="tips"><a href="#">待办事项</a><cite>1</cite></li>
-                <li class="close"><a href="#">日常工作</a></li>
-                <li class="open"><a href="#">流程管理</a>
+                <li class="close"><a href="#">日常工作<small class="remind">点我</small></a>
+                    <ul class="subMenu">
+                        <li class="current"><a href="#">报表审核</a></li>
+                        <li><a href="#">申请单处理</a><small class="remind">点我</small></li>
+                    </ul>
+                </li>
+                <li class="open"><a href="#">流程管理<small class="remind">点我</small></a>
                     <ul class="subMenu">
                         <li class="current"><a href="#">可申请流程</a></li>
-                        <li><a href="#">我的申请</a></li>
+                        <li><a href="#">我的申请<small class="remind">点我</small></a></li>
                         <li><a href="#">待我审批</a></li>
                         <li class="bordernone"><a href="#">我已审批</a></li>
                     </ul>
@@ -146,6 +151,14 @@
         $('.unslider-arrow04').click(function() {
             var fn = this.className.split(' ')[1];
             data04[fn]();
+        });
+
+        /*左侧二极菜单显示与隐藏*/
+        $($("ul[class=subMenu]").parent().children("a")).click(function(){
+            $(this).parent().toggleClass("close open");
+        });
+        $("ul[class=subMenu] li").click(function(){
+            $(this).addClass("current").siblings().removeClass("current");
         });
     });
 </script>
