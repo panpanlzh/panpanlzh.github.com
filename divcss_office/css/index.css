@@ -116,15 +116,67 @@ body{
 }
 
 /*右侧内容---banner---开始*/
-.rightContent .banner{
-    height:342px;
+/*右侧内容---轮播图---开始*/
+/*轮播图*/
+.rightContent .banner {
+    position: relative;
+    overflow: auto;
+    text-align: center;
+    height:356px;
     width:518px;
     border:1px solid #b3c5d9;
     float:left;
 }
-.rightContent .banner li{
-    padding:10px 18px;
+.rightContent .banner li {
+    list-style: none;
 }
+.rightContent .banner ul li {
+    float: left;
+}
+#b04 {
+    width: 400px;
+    position: relative;
+}
+#b04 .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+#b04 .dots li
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    text-indent: -999em;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: .4;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+#b04 .dots li.active
+{
+    background: #fff;
+    opacity: 1;
+}
+#b04 .arrow { position: absolute; top: 200px;}
+#b04 #al { left: 15px;}
+#b04 #ar { right: 15px;}
+/*右侧内容---轮播图---结束*/
+
+/*.rightContent .banner{*/
+    /*height:342px;*/
+    /*width:518px;*/
+    /*border:1px solid #b3c5d9;*/
+    /*float:left;*/
+/*}*/
+/*.rightContent .banner li{*/
+    /*padding:10px 18px;*/
+/*}*/
 /*右侧内容---banner---结束*/
 
 /*右侧内容---新闻列表---开始*/

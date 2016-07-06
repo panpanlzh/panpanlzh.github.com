@@ -1,8 +1,8 @@
 /*轮播图*/
-.Carousel,.Carousel img {
-    width: 740px;
-    height: 313px;
-}
+/*.Carousel,.Carousel img {*/
+    /*width: 740px;*/
+    /*height: 313px;*/
+/*}*/
 
 
 /*左侧-集团新闻列表*/
@@ -81,6 +81,36 @@
     display: block;
     margin-top: 9px;
 }
+
+/*轮播图*/
+.Carousel { position: relative; overflow: auto; text-align: center;}
+.Carousel li { list-style: none; }
+.Carousel ul li { float: left; }
+#b04 { width: 738px; position: relative;}
+#b04 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+#b04 .dots li
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    text-indent: -999em;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: .4;
+    -webkit-transition: background .5s, opacity .5s;
+    -moz-transition: background .5s, opacity .5s;
+    transition: background .5s, opacity .5s;
+}
+#b04 .dots li.active
+{
+    background: #fff;
+    opacity: 1;
+}
+#b04 .arrow { position: absolute; top: 200px;}
+#b04 #al { left: 15px;}
+#b04 #ar { right: 15px;}
 
 
 

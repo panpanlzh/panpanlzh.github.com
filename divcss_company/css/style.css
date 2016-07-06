@@ -48,6 +48,7 @@ img{
     height: 0;
     width:100%;
 }
+header,nav,article,section,aside,footer{display:block;}
 
 /*面包屑导航*/
 .crumbs h2{
