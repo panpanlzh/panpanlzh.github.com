@@ -1,0 +1,98 @@
+cd /Projects/com.myfund.fdb
+git pull
+
+cd /Applications/apache-tomcat-8.0.30/bin
+ ./shutdown.sh
+
+cd /Applications/apache-tomcat-8.0.30/webapps/fdb
+rm -rf fdb
+rm -f fdb.war
+
+cp /Projects/com.myfund.fdb/out/fdb.war  /Applications/apache-tomcat-8.0.30/webapps 
+
+cp /Projects/com.myfund.sqlfdb/out/sqlfdb.war  /Applications/apache-tomcat-8.0.30/webapps 
+
+rm -f localhost_access_log.2016-01-13.txt
+rm -f localhost.2016-01-13.log
+rm -f catalina.2016-01-13.log
+
+
+
+
+
+
+
+cd /Applications/apache-tomcat-8.0.30/bin
+ ./startup.sh
+
+cat catalina.out
+
+more xx.text
+ctrl+f (向下滚一屏)
+ctrl+B (向上滚一屏)
+
+
+vi xx.text
+vim 
+i或者e (进入编辑模式)
+dd 删除光标所在行
+x删除一个字符
+esc （进入一般模式）
+: (进入命令模式)
+q! 不保存退出
+wq 保存并退出
+x 保存并退出
+
+find / -name pg_hba.conf 
+
+ps -ef | grep tomcat | grep -v grep查进程
+kill 4063杀进程
+
+
+ftp相关: 
+	检查安装vsftpd软件:
+	#rpm -qa |grep vsftpd
+
+	安装: 
+	#yum install vsftpd -y
+
+	启动ftp命令#service vsftpd start
+	停止ftp命令#service vsftpd stop
+	重启ftp命令#service vsftpd restart
+        查看ftp状态#service vsftpd status
+
+
+	建用户：在root用户下：
+	useradd -d /home/test test //增加用户test，并制定test用户的主目录为/home/test
+	passwd test //为test设置密码
+
+	更改用户相应的权限设置：
+	usermod -s /sbin/nologin test //限定用户test不能telnet，只能ftp
+	usermod -s /sbin/bash test //用户test恢复正常
+	usermod -d /test test //更改用户test的主目录为/test
+
+
+防火墙相关:
+        service iptables status可以查看到iptables服务的当前状态。
+        关于启动和关闭防火墙的命令:
+		1) 重启后生效
+		开启： chkconfig iptables on
+		关闭： chkconfig iptables off
+		2) 即时生效，重启后失效
+		开启： service iptables start
+		关闭： service iptables stop
+	查看iptables规则及编号
+	iptables -nL
+
+
+
+      
+
+
+
+
+
+
+
+
+

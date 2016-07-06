@@ -1,0 +1,177 @@
+grails create-app racetrack
+
+grails run-app
+
+grails create-domain-class Race 创建领域类 (如果之前的应用还在运行，请先按Control-C停止它)
+
+
+grails --debug-jvm run-app
+
+
+
+
+===========================================================
+sqlserver配置开始
+===========================================================
+compile fileTree(dir:'lib',include:'*.jar')
+driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+url: jdbc:sqlserver://10.20.25.224:1433;databasename=fdb
+
+runtime "net.sourceforge.jtds:jtds:1.3.0"
+
+dataSources:
+    dataSource:
+        pooled: true
+        jmxExport: true
+        # driverClassName: org.postgresql.Driver
+        # driverClassName = "oracle.jdbc.driver.OracleDriver"
+        driverClassName: net.sourceforge.jtds.jdbc.Driver
+        username: myfunduser
+        password: MYfund123!
+    SecondaryData:
+        # dialect: org.hibernate.dialect.MySQLInnoDBDialect
+        driverClassName: net.sourceforge.jtds.jdbc.Driver
+        username: myfunduser
+        password: MYfund123!
+        url: jdbc:jtds:sqlserver://10.20.33.15:1433/SecondaryData_Test
+        dbCreate: update
+    FinChinaData:
+        # dialect: org.hibernate.dialect.MySQLInnoDBDialect
+        driverClassName: net.sourceforge.jtds.jdbc.Driver
+        username: myfunduser
+        password: MYfund123!
+        url: jdbc:jtds:sqlserver://10.20.33.15:1433/FinChinaData_Test
+        dbCreate: update
+
+
+environments:
+    development:
+        dataSources:
+            dataSource:
+                dbCreate: update
+                url: jdbc:jtds:sqlserver://10.20.33.15:1433/PrimaryData_test
+    test:
+        dataSources:
+            dataSource:
+                dbCreate: update
+                url: jdbc:jtds:sqlserver://10.20.33.15:1433/PrimaryData_test
+    production:
+        dataSources:
+            dataSource:
+                dbCreate: update
+                url: jdbc:jtds:sqlserver://10.20.33.15:1433/PrimaryData_test
+                properties:
+                    jmxEnabled: true
+                    initialSize: 5
+                    maxActive: 50
+                    minIdle: 5
+                    maxIdle: 25
+                    maxWait: 10000
+                    maxAge: 600000
+                    timeBetweenEvictionRunsMillis: 5000
+                    minEvictableIdleTimeMillis: 60000
+                    validationQuery: SELECT 1
+                    validationQueryTimeout: 3
+                    validationInterval: 15000
+                    testOnBorrow: true
+                    testWhileIdle: true
+                    testOnReturn: false
+                    jdbcInterceptors: ConnectionState
+                    defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+
+===========================================================
+sqlserver配置结束
+===========================================================
+
+
+
+===========================================================
+postgresql配置开始
+===========================================================
+dataSource:
+    pooled: true
+    jmxExport: true
+    driverClassName: org.postgresql.Driver
+    username: root
+    password: 840819
+    # dialect: org.hibernate.dialect.MySQLInnoDBDialect
+    # dialect: org.hibernate.dialect.SQLServerDialect
+    # dialect: org.hibernate.dialect.PostgreSQLDialect
+
+environments:
+    development:
+        dataSource:
+            dbCreate: create-drop
+            url: jdbc:postgresql://127.0.0.1:5432/fdb
+    test:
+        dataSource:
+            dbCreate: update
+            url: jdbc:postgresql://127.0.0.1:5432/fdb
+    production:
+        dataSource:
+            dbCreate: update
+            url: jdbc:postgresql://127.0.0.1:5432/fdb
+            properties:
+                jmxEnabled: true
+                initialSize: 5
+                maxActive: 50
+                minIdle: 5
+                maxIdle: 25
+                maxWait: 10000
+                maxAge: 600000
+                timeBetweenEvictionRunsMillis: 5000
+                minEvictableIdleTimeMillis: 60000
+                validationQuery: SELECT 1
+                validationQueryTimeout: 3
+                validationInterval: 15000
+                testOnBorrow: true
+                testWhileIdle: true
+                testOnReturn: false
+                jdbcInterceptors: ConnectionState
+                defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+
+runtime  "org.postgresql:postgresql:9.4-1204-jdbc42"
+===========================================================
+postgresql配置结束
+===========================================================
+
+
+
+
+
+===========================================================
+mysql配置开始
+===========================================================
+driverClassName: com.mysql.jdbc.Driver
+url: jdbc:mysql://localhost:3306/juling
+
+runtime 'mysql:mysql-connector-java:5.1.29'
+===========================================================
+mysql配置结束
+===========================================================
+
+
+
+===========================================================
+oracle配置开始
+===========================================================
+driverClassName: oracle.jdbc.driver.OracleDriver
+url: jdbc:oracle:thin:@localhost:1521:lookup
+
+===========================================================
+oracle配置结束
+===========================================================
+
+定时器
+http://grails-plugins.github.io/grails-quartz/snapshot/guide/triggers.html
+
+
+在线HTTP POST/GET接口测试工具 - aTool在线工具
+http://www.atool.org/httptest.php
+
+
+
+
+
+
+

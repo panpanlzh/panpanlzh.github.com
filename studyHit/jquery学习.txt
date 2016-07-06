@@ -1,0 +1,452 @@
+1、 window.onload = function(){	
+   		alert("测试");
+    }
+
+    $(document).ready(function(){
+    	alert("测试");    
+    })
+
+    $(function(){
+    	alert("测试");    
+    })
+2、 创建DOM元素
+	1)	$("<b>Hi there!</b>")  ///仅仅是创建了元素，但还没有放入document树中
+	2)  $("p").append("<b>Hi there!</b>");
+	    把<b>Hi there!</b>追加到页面上所有的P元素的现有内容的后面；
+	    与此函数有相同功能的函数是 $("p").appendTo("<b>Hi there!</b>"),只是原元素和目标元素相反；
+	    传入append函数的参数包括HTML片段的字符串、现有或新建的DOM元素的引用、jQuery元素包装集；
+	    如果目标元素有一个，则执行把原始元素移动到新父元素的操作(剪切操作)；
+	    如果目标元素有多个，则原始元素留在原处，而原始元素的副本被追加到各个目标元素(复制操作)；
+	3)	$("p").prepend("<b>Hi there!</b>");
+	  	把<b>Hi there!</b>追加到页面上所有的P元素的现有内容的最前面；
+	  	与其具有相同功能的函数是 $("p").prependTo("<b>Hi there!</b>"),只是原元素和目标元素相反；
+    4)	类似的方法还有
+        before()、insertBefore()
+        after()、insertAfter()
+
+3、 选择器
+	1)	基本的css选择器
+	    如：#specialID、.specialID、p a.specialClass等
+	2)	后代选择器
+	    如：ul.myList li a
+	3)	直接子节点选择器
+	    如：ul.myList > li > a
+    4)	兄弟节点选择器
+        如：E + F:匹配前面是邻近兄弟节点E元素的所有元素F，且E和F是紧挨着的;
+            E ~ F:匹配前面是任意兄弟节点E元素的所有元素F，E和F不是紧挨着的;
+    5)	容器选择器
+        如：E:has(F):匹配标签名称是E，且至少有一个后代节点标签为F元素；
+    6)	特性选择器
+        如：E[A]
+            E[A=V]
+            E[A^=V]
+            E[A$=V]
+            E[A*=V]
+    7)	位置选择器
+        如: :first  第一个
+            :last   最后一个
+            :even   偶数项
+            :odd    奇数项
+            :eq(n)  第n个元素
+            :gt(n)  第n个元素之后的元素
+            :lt(n)  第n个元素之前的元素
+
+            :only-child  返回之有子节点、没有兄弟节点的所有元素
+            :first-child  返回第一个子元素
+            :last-child   返回最后一个子元素
+            :nth-child(n)  返回第n个子元素
+            :nth-child(odd|even) 返回奇数或者偶数的子元素
+            :nth-child(Xn+Y) 根据传入的公式计算的第n个子元素
+    8)  jQuery自定义选择器
+        如：:image 选择图片元素
+            :input 选择表单元素，包含：<input>、<select>、<textarea>、<button>
+            :button 选择任何按钮，包括type=submit、type=reset、type=button、button等
+
+            :checkbox 选择复选框元素
+            :radio 选择单选按钮元素
+            :file 选择所有文件元素，如type=file            
+            :password 选择口令元素
+            :reset 选择复位按钮，包括(input[type=reset])、(button[type=reset])
+            :submit 选择提交按钮，包括(button[type=submit])、(input[type=submit])
+            :text 选择文本元素
+
+            :visible 选择可见元素
+            :hidden 选择隐藏元素
+            :disabled 选择已经禁用的表单元素
+            :enabled  选择已经启用的表单元素
+            :selected 选择已经选中的元素
+            :header 选择标题元素，如：h1 h2 ...h6
+            :contains(foo) 选择包含文本foo的元素
+            :parent 返回拥有后代节点的元素
+            :not(filter) 根据指定的筛选器取反，注意筛选器是以:或者[开头的,其它选择器不能放在:not里面
+            :animated 选择当前处于动态控制下的元素
+
+4、 包装集相关的方法
+    1)  $('a').size()  返回包装集长度，等同于 $('a').length。
+    2)  $('a').get(0)  获取包装集里面第一个元素，等同于$('a')[0]；
+                       如果省略参数，则包装集里面的所有元素以数组形式返回
+                       get()方法也可以把元素包装集转化为JavaScript数组,如 var allLabeledButtons=$('label+button').get();
+    3)  $('a').index($('a#home')[0]) 
+            在包装集中查找传入的元素,并返回该元素在包装集里的下标,如果该元素不在包装集中则返回-1;
+    4)  $('img[alt]').add('img[title]')  
+            把表达式参数所指定的元素添加到包装集，表达式可以是 选择器、html片段、Dom元素或Dom元素数组;
+    5)  $('img[title]').not('[title*=puppy]')
+            把表达式元素所指定的元素从包装集删除。注意：传入的参数只能是筛选选择器，不能是显示的元素选择器。
+    6)  $('td').filter(function(){return this.innerHTML.match(/^\d+$/)})  
+            利用传入的选择器表达式或者筛选函数，从包装集中筛选元素；
+            表达式或者函数返回false的将会从包装集中删除。
+    7)  $('*').slice(2,3)
+            获取包装集子集，第一个参数是指包含在子集中的第一个元素下标，第二个参数是指不被包含在子集中的第一个元素的下标；
+    8)  $('.wrappedSet').find('p cite')  
+            从包装集获取子包装集，等同于 $('p cite',$('.wrappedSet')),此时$('.wrappedSet')便是上下文参数
+    9)  $('p').contains('Lorem ipsum') 返回新包装集
+    10) $('p').children() 
+           返回原是包装集中所有唯一子元素组成的包装集。
+    10) $('p').parent() 
+           返回原是包装集中所有唯一父元素组成的包装集。
+    11) $('p').parents() 
+           返回原始包装集中所有的唯一祖先元素组成的包装集。 
+    12) $('p').next()
+           返回原始包装集中所有的唯一的下一个兄弟元素组成的包装集。
+        $('p').nextAll()
+           返回原始包装集元素的所有后续兄弟元素组成的包装集。
+    13) $('p').prev()
+        $('p').prevAll()
+    14) $('p').siblings()
+           返回原始包装集元素的所有兄弟元素组成的包装集。
+    15) $('*').is('img')
+          看是否至少包含一个匹配给定选择器的元素，如果至少有一个元素匹配选择器则返回true,否则返回false;
+
+5、 元素属性相关方法
+    1)  $('img').each(function(n){
+        	this.alt='This is image['+n+'] with an id of '+this.id;
+    	});  
+    2)  $("#MyImage").attr('title');  获取属性/特性值；
+        $("#MyImage").attr('title','好好'); 设置单个属性/特性值；
+        $('input').attr({value:'22',title:'好好好'}); 设置多个属性/特性值；
+        $("#MyImage").removeAttr('title'); 删除属性/特性值；
+        $("#MyImage").attr('class');
+        $("#MyImage").attr('maxlength');
+        $("#MyImage").attr('readonly');
+    3)  修改元素类名称
+    	$("#MyImage").addClass('color');  添加类名
+    	$("#MyImage").removeClass('color');  移出类名
+    	$("#MyImage").toggleClass('color'); 
+    	$("#MyImage").hasClass('color');  是否拥有此类名
+    4)  $("#MyImage").css('color'); 获取样式
+        $("#MyImage").css('color','red'); 设置单个样式
+        $("#MyImage").css({color:red,width:10px}); 设置多个样式
+    5)  $('#MyImage').width();  获取宽度
+        $('#MyImage').width(500);  设置宽度 等效于$("#MyImage").css('width','500px');
+
+        $('#MyImage').height();  获取高度
+        $('#MyImage').height(500);  设置高度 等效于$("#MyImage").css('height','500px');
+    6)  $('#theList').html();   获取html内容
+        $('#theList').html('<p>你好</p>');   设置html内容
+
+        $('#theList').text();   获取文本内容
+        $('#theList').text('你好');   设置文本内容
+6、 操作DOM元素
+    1)  包裹元素
+        wrap(wrapper)  把匹配集各元素用已传递HTML标签或已传递元素的克隆副本分别包裹起来。
+        wrapAll(wrapper) 用已传递元素的克隆副本或已传递HTML标签，把匹配集的元素作为一个单元包裹起来。
+        wrapInner(wrapper) 用已传递元素的克隆副本或已传递HTML标签，把匹配集各元素的内容分别包裹起来。
+
+        以下两个方法用于区分传递的是HTML标签还是元素的克隆副本。
+        $('a.surprise').wrap("<div class='hello'></div>");
+        $('a.surprise').wrap($("div:first")[0]);
+    2)  删除元素
+        remove() 
+        从页面DOM里面删除包装集里所有元素，但这个命令还是以包装集作为返回结果。即从DOM里删除的元素仍然被包装集
+        引用着，并可用其他jQuery命令来进一步操作。
+        考虑以下代码：
+        $("div.elementToReplace").after("<p>I am replaceing the div</p>").remove();
+
+        empty()
+        清空匹配集里所有DOM元素的内容。
+    3)  克隆元素
+        clone(copyHandlers)  copyHandlers决定是否copy事件处理程序
+    4)  操作表单元素值
+        val()  返回匹配集里第一个元素的value特性。如果是多选元素，返回所有选中项的数组。
+        val(value) 把传入值设置为所有匹配表单元素的值。
+
+        val(values)
+        例如：$('input,select').val(['one','two','three']);
+        这个语句将搜索页面上所有<input>和<select>元素，只要它们的值和输入字符串one、two或three中的任何一个相匹配。
+        搜索到的任何匹配复选框和单选按钮将变为已选中状态，而任何匹配的选项将变为已选择状态。
+7、 事件
+    1)  bind(eventType,[data],listener)  绑定事件,第二个参数可省略
+        例：
+        var obj = { id: 5, name: "王五" };
+        $("button")
+        .bind("click",obj ,function(event){
+        	alert(event.data.name);   
+    	})
+    	.bind("click",obj ,function(event){
+        	alert(event.data.id);   
+    	});
+    	绑定多个事件的另一个方式如下：
+    	$("button").bind({
+    		click:function(){$("p").slideToggle();},
+    		mouseover:function(){$("body").css("background-color","red");},  
+    		mouseout:function(){$("body").css("background-color","#FFFFFF");}  
+    	});
+
+    	可以通过指定命名空间给事件处理程序分组，例：
+    	$('#thing1').bind('click.editMode',someListener);
+    	$('#thing2').bind('click.editMode',someOtherListener);
+    	删除以上绑定：$('*').unbind('click.editMode');
+
+    2)  unbind(eventType,[listener]) 解除事件绑定，listener参数是可选的
+        function btnClick1(){
+    		alert( this.value + "-1" );
+		}
+		$('.buttons').bind( "click", btnClick1);
+		$('.buttons').unbind("click"); 或者$('.buttons').unbind("click",btnClick1);
+
+
+        unbind(eventObject) 另一种解除绑定的方式
+        例如：
+        $("button").bind("click", function(event){
+    		alert("只执行一次!");
+    		$(this).unbind( event ); 
+    3)  on(event,[selector],[data],handler)
+        从jQuery1.7开始，on函数提供了绑定事件处理程序所需的所有功能，用于统一取代以前的bind()、delegate()、live()等事件函数。
+        即使是执行on函数之后新添加的元素，只要符合条件，绑定的事件处理函数也对其有效。
+        该函数可以为同一元素、同一事件类型绑定多个处理函数。触发事件时，jQuery会按照绑定的先后顺序依次执行绑定的事件处理函数。
+        要删除通过on绑定的事件，请使用off()函数。
+    3)  eventTypeName(listener) 绑定事件处理程序的快捷命令
+        例：
+        $("button").click(function(event){
+    		alert(event.data);   
+  		});
+  		但是这种方法不能指定存储在event.data里面的data值。
+    4)  one(eventType,[data],listener)
+        此种绑定只执行一次，执行完毕自动删除绑定。
+    
+		});
+	5)  event事件的属性
+	    event.data
+	    event.pageX
+	    event.pageY
+	    event.screenX
+	    event.screenY
+	    event.target
+	    event.type
+	    event.keyCode 返回被按下的键，字母不区分大小写。
+	6)  trigger(eventType)
+	    调用所有已匹配元素的、为已传递事件类型而建立的任何事件处理程序。
+	    通过此方法调用的事件处理程序，因为没有触发事件，因此没有相应的属性值，target属性被设置为匹配集元素的引用。
+	7)  eventName()
+	    调用为所有匹配元素的指名事件类型而建立的任何事件处理程序。
+	    支持的命令如下：
+	    blur()
+	    click()
+	    focus()
+	    select()
+	    submit()
+	8)  toggle(listenerOdd,listenerEven)
+	    把已传递函数建立为包装集所有元素的一对click事件处理程序，每当触发click事件就相互切换。
+	9)  hover(overListener,outListener)
+	    建立已匹配元素的mouseover和mouseout事件处理程序，这些处理程序当且仅当元素所覆盖区域被进入和退出时触发，忽略鼠标指针从父元素到子元素上的迁移。
+	10) hide(speed,callback)
+	    show(speed,callback)
+	    toggle(speed,callback)
+	    使元素逐渐地显示和隐藏，speed指定为毫秒数和预定义的字符串之一：slow、normal、fast。
+	11) fadeIn(speed,callback)
+	    fadeOut(speed,callback)
+	    使元素淡入淡出，即以动画的方式进行show()和hide()。
+
+	    fadeTo(speed,opacity,callback)
+	    从当前的设置到opacity所指定的新设置，调整已包装的元素的不透明度。
+	    opacity 取值范围从0.0到1.0。
+	12) slideDown(speed,callback)
+	    slideUp(speed,callback)
+	    slideToggle(speed,callback)
+	    工作方式和效果show()和hide()相似，元素显示时似乎从顶部滑下来，而元素隐藏时似乎向顶部滑上去。
+	13) stop()
+	    停止当前正在运行的、包装集里的元素的所有动画。
+	14) animate(properties,duration,easing,callback)
+	    animate(properties,options)
+	    创建自定义的动画。
+	    
+8、 JQuery实用工具
+    1)  $.browser 
+        定义一组标志,用来显示当前的用户代理属于哪一个浏览器家族,如下:
+        $.browser.msie
+        $.browser.mozilla
+        $.browser.opera
+        $.browser.safari
+        $.browser.version 浏览器呈现引擎的版本号。
+    2)  $.boxModel
+        如果页面使用的W3C标准的方框模型，则为true;
+        如果页面使用的IE浏览器的方框模型，则为false。
+        W3C标准的方框模型下，width和height的值不包含内边距和边框宽度;
+        传统的方框模型下，width和height的值包含内边距和边框宽度。
+        使用哪一种方框模型取决于页面上的DOCTYPE声明，如果页面上包含有效的可识别的DOCTYPE声明，则以严格模式呈现，是符合W3C标准的方框模型。
+    3)  $.noConflict()
+        归还$名称的控制权给另一个库，因为$不过是JQuery的别名，所以在应用$.noConflict()之后JQuery的全部功能依然可用，只不过是通过使用JQuery标识符。
+        . var $j=jQuery;
+        . 不使用$.noConflict()时用一下用法避免冲突：
+          (function($){/*functon*/})(jQuery)
+        . jQuery(function($){
+          	alert('I am ready');
+          })
+          通过传递一个函数作为jQuery函数的参数，由此把这个作为就绪处理程序。
+          jQuery总是把jQuery对象的引用作为唯一的第一个参数传递给就绪处理程序，所以在就绪处理程序内jQuery
+          对象被$名称所引用，不管在就绪处理函数体的外面是否$名称已被定义。
+    4)  $.trim(value)
+        删除传入字符串任何前导和尾随空白字符串并返回结果。
+    5)  $.each(container,callback)
+        对传入容器的每项进行迭代，为每一项调用传入的回调函数。container可以是数组或对象。例：
+        var anArray = ['one','two','three'];
+        $.each(anArray,function(n,value){
+        	///do something here
+        });
+
+        var anObject ={one:1,two:2,three:3};
+        $.each(anObject,function(n,value){
+        	//do something here
+        });
+    6)  $.grep(array,callback,invert)  筛选数组
+        遍历已传入的数组，为各元素分别调用回调函数，回调函数的返回值决定是否把当前元素收集到新数组。
+        如果invert参数被省略或设置为false则回调函数返回true时导致当前元素被收集，否则回调函数返回false时当前元素被收集，原始数组不会被修改。
+    7)  $.map(array,callback)  转换数组
+        为数组的各元素调用回调函数，并把回调函数的返回值收集到新数组。
+    8)  $.inArray(value,array) 
+        返回已传入的值在数组里第一次出现的下标。如果搜索不到返回-1。
+    9)  $.makeArray(object)
+        把传入的类似数组的对象转换为javascript数组。比如 NodeList
+    10) $.extend(target,source1,source2,...sourceN) 扩展对象
+        用已传入的source1...sourceN对象的属性扩展已传入的target对象。
+        用新的属性直接修改目标对象，然后把目标对象作为函数的值返回。
+        任何一个与源对象属性名称相同的、目标对象的任何属性，被覆盖为源对象的属性值。
+    11) $.getScript(url,callback)
+        向指定的服务器发起Get请求，获取url参数指定的脚本。
+        callback是可选参数。
+
+9、 Ajax相关的交互
+    1)  load(url,parameters,callback) 从服务器资源加载内容
+        parameters、callback为可选参数。
+        指定parameters则以post方式发起请求，否则已get方式发起请求。
+        注：响应文本将替换所有已匹配元素的内容。
+    2)  serialize()
+        根据包装集里所有成功表单元素，创建正确格式化的、经过URL编码的查询字符串。
+    3)  serializeArray()
+        把所有的成功表单元素的值收集到对象的数组中(包含表单元素的名称和值)，例如
+        $("button").click(function(){
+        	x=$("form").serializeArray();
+        	$.each(x,function(i,field){
+        		alert(field.name+":"+field.value);
+        	});
+        });
+    4)  $.get(url,parameters,callback) 向服务器发起GET请求。
+        parameters可以是一个对象，其属性作为“名称/值对”用于构造字符串并追加到URL;
+                  也可以是一个预先格式化的URL编码的查询字符串。
+        响应体作为第一个参数传递到回调函数，响应状态则作为第二个参数传递到回调函数。
+        例如：
+        $.get(
+        	'reflectData.jsp',
+        	{a:1,b:2,c:3},
+        	function(a){alert(data);}
+        );
+    5)  $.getJSON(url,parameters,callback) 向服务器发起GET请求，且返回json格式数据。
+        JSON格式如下：
+        {
+        	{value:'',caption:'111'},
+        	{value:'',caption:'22'},
+        	{value:'',caption:'333'}
+        }
+
+        处理返回来的JSON:
+        $.each(optionDataArray,function(index,optionData)
+        	{
+        		var option=new Option(optionData.caption,optionData.value);
+        	}
+        )
+    6)  $.post(url,parameters,callback) 向服务器发起POST请求
+    7)  $.ajax(options) 完全控制的ajax请求，所有参数都可在options中设置。
+        返回xhr实例。
+        xhr的属性包括：
+	        onreadystatechange
+	        readyState(0-未初始化;1-正在加载;2-已加载;3-交互;4-完成)
+	        responseText
+	        responseXML
+	        status(200-成功;404-未找到)
+	        statusText
+	    返回jsonp格式数据可以实现跨域请求，实现方法如下：
+	    $.ajax({
+	    	type:'get',
+	    	async:false,
+	    	data:{code:150176}
+	    	url:'http://www.myfund.com/wajax/funditem.ashx',
+	    	dataType:'jsonp',
+	    	jsonp:'callbackdata',
+	    	success:function(data){
+	    		alert(data.name);
+	    	},
+	    	error:function(){
+	    		alert('error');
+	    	}
+	    })
+	    后端程序实现：
+	    context.Response.ContentType = "applicaton/json";
+	    context.Response.Write(context.Request.QueryString["callbackdata"] + "({\"name\":\"panpan\"})");
+
+    8)  $.ajaxSetup(properties) 为后续的$.ajax()调用，把传入的遗嘱属性设置为默认值。
+        $.ajax()和$.ajaxSetup()需要的参数都需要用{}括起来，例：
+        $.ajaxSetup({
+        	type:'POST',
+        	datatype:'html',
+        	error:function(xhr){
+    			alert(xhr.status);    			
+        	}
+        })
+10、 JQuery开发插件有两种方法
+    1)  jQuery.fn.extend(object);或者写成$.fn.extend(object);给jQuery对象添加方法。
+    2)  jQuery.extend(object);扩展jQuery类本身，为类添加新的静态方法。
+
+
+
+
+
+select 操作:
+alert("选中的值：" + $("#sel").val());
+alert("选中的text:"+$("#sel").find("option:selected").text());
+alert("选中的text2:"+$("#sel option:selected").text());
+alert("选中的索引："+$("#sel").get(0).selectedIndex);
+alert("最大的索引："+$("#sel option:last").index());
+alert("某个option的值："+$("#sel").get(0).options[1].value);
+alert("某个option的text："+$("#sel").get(0).options[1].text);
+alert("长度：" + $("#sel option").length);
+
+$("#sel").get(0).selectedIndex=2; ///设置select选中哪个option
+$("#sel").val("3"); ///设置select选中哪个option
+$("#sel").get(0).value="3"; ///设置select选中哪个option
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
