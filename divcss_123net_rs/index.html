@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,mininum-scale=1.0,user-scalable=no">
+    <title>123net响应式</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header clearfix">
+        <a href="#" class="logo"></a>
+        <div class="button"></div>
+        <ul>
+            <li class="on"><a href="#">首页</a></li>
+            <li><a href="#">如何包月换衣</a></li>
+            <li><a href="#">热门品牌</a></li>
+            <li><a href="#">清洗护理</a></li>
+            <li><a href="#">衣二三女神</a></li>
+            <li><a href="#">行业资讯</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">登录/注册</a></li>
+        </ul>
+    </div>
+</header>
+<div class="banner"></div>
+
+<script type="text/javascript">
+    $(".header .button").click(function(){
+        $(".header ul").slideToggle('fast');
+    });
+    $(window).resize(function(){
+        if($(".header ul").is(":hidden")) $(".header ul").show();
+    });
+</script>
+</body>
+</html>

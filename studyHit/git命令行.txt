@@ -1,290 +1,290 @@
 http://justcoding.iteye.com/blog/1830388
 
-³õÊ¼»¯ÅäÖÃ
+åˆå§‹åŒ–é…ç½®
 
-#ÅäÖÃÊ¹ÓÃgit²Ö¿âµÄÈËÔ±ĞÕÃû  
-git config --global user.name "Your Name Comes Here"  
-  
-#ÅäÖÃÊ¹ÓÃgit²Ö¿âµÄÈËÔ±email  
-git config --global user.email you@yourdomain.example.com  
-  
-#ÅäÖÃµ½»º´æ Ä¬ÈÏ15·ÖÖÓ  
-git config --global credential.helper cache   
-  
-#ĞŞ¸Ä»º´æÊ±¼ä  
-git config --global credential.helper 'cache --timeout=3600'    
-  
-git config --global color.ui true  
-git config --global alias.co checkout  
-git config --global alias.ci commit  
-git config --global alias.st status  
-git config --global alias.br branch  
-git config --global core.editor "mate -w"    # ÉèÖÃEditorÊ¹ÓÃtextmate  
-git config -1 #ÁĞ¾ÙËùÓĞÅäÖÃ  
-  
-#ÓÃ»§µÄgitÅäÖÃÎÄ¼ş~/.gitconfig  
+#é…ç½®ä½¿ç”¨gitä»“åº“çš„äººå‘˜å§“å
+git config --global user.name "Your Name Comes Here"
 
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
+#é…ç½®ä½¿ç”¨gitä»“åº“çš„äººå‘˜email
+git config --global user.email you@yourdomain.example.com
 
-  
-²é¿´¡¢Ìí¼Ó¡¢Ìá½»¡¢É¾³ı¡¢ÕÒ»Ø£¬ÖØÖÃĞŞ¸ÄÎÄ¼ş
+#é…ç½®åˆ°ç¼“å­˜ é»˜è®¤15åˆ†é’Ÿ
+git config --global credential.helper cache
 
-git help <command>  # ÏÔÊ¾commandµÄhelp  
-git show            # ÏÔÊ¾Ä³´ÎÌá½»µÄÄÚÈİ  
-git show $id  
-   
-git co  -- <file>   # Å×Æú¹¤×÷ÇøĞŞ¸Ä  
-git co  .           # Å×Æú¹¤×÷ÇøĞŞ¸Ä  
-   
-git add <file>      # ½«¹¤×÷ÎÄ¼şĞŞ¸ÄÌá½»µ½±¾µØÔİ´æÇø  
-git add .           # ½«ËùÓĞĞŞ¸Ä¹ıµÄ¹¤×÷ÎÄ¼şÌá½»Ôİ´æÇø  
-   
-git rm <file>       # ´Ó°æ±¾¿âÖĞÉ¾³ıÎÄ¼ş  
-git rm <file> --cached  # ´Ó°æ±¾¿âÖĞÉ¾³ıÎÄ¼ş£¬µ«²»É¾³ıÎÄ¼ş  
-   
-git reset <file>    # ´ÓÔİ´æÇø»Ö¸´µ½¹¤×÷ÎÄ¼ş  
-git reset -- .      # ´ÓÔİ´æÇø»Ö¸´µ½¹¤×÷ÎÄ¼ş  
-git reset --hard    # »Ö¸´×î½üÒ»´ÎÌá½»¹ıµÄ×´Ì¬£¬¼´·ÅÆúÉÏ´ÎÌá½»ºóµÄËùÓĞ±¾´ÎĞŞ¸Ä  
-   
-git ci <file>  
-git ci .  
-git ci -a           # ½«git add, git rmºÍgit ciµÈ²Ù×÷¶¼ºÏ²¢ÔÚÒ»Æğ×ö  
-git ci -am "some comments"  
-git ci --amend      # ĞŞ¸Ä×îºóÒ»´ÎÌá½»¼ÇÂ¼  
-   
-git revert <$id>    # »Ö¸´Ä³´ÎÌá½»µÄ×´Ì¬£¬»Ö¸´¶¯×÷±¾ÉíÒ²´´½¨ÁËÒ»´ÎÌá½»¶ÔÏó  
-git revert HEAD     # »Ö¸´×îºóÒ»´ÎÌá½»µÄ×´Ì¬  
- 
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
+#ä¿®æ”¹ç¼“å­˜æ—¶é—´
+git config --global credential.helper 'cache --timeout=3600'
 
-²é¿´ÎÄ¼şdiff
+git config --global color.ui true
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global core.editor "mate -w"    # è®¾ç½®Editorä½¿ç”¨textmate
+git config -1 #åˆ—ä¸¾æ‰€æœ‰é…ç½®
 
-git diff <file>     # ±È½Ïµ±Ç°ÎÄ¼şºÍÔİ´æÇøÎÄ¼ş²îÒì  
-git diff  
-git diff <$id1> <$id2>   # ±È½ÏÁ½´ÎÌá½»Ö®¼äµÄ²îÒì  
-git diff <branch1>..<branch2> # ÔÚÁ½¸ö·ÖÖ§Ö®¼ä±È½Ï  
-git diff --staged   # ±È½ÏÔİ´æÇøºÍ°æ±¾¿â²îÒì  
-git diff --cached   # ±È½ÏÔİ´æÇøºÍ°æ±¾¿â²îÒì  
-git diff --stat     # ½ö½ö±È½ÏÍ³¼ÆĞÅÏ¢  
+#ç”¨æˆ·çš„gité…ç½®æ–‡ä»¶~/.gitconfig
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
-  
-²é¿´Ìá½»¼ÇÂ¼
 
-git log  
-git log <file>      # ²é¿´¸ÃÎÄ¼şÃ¿´ÎÌá½»¼ÇÂ¼  
-git log -p <file>   # ²é¿´Ã¿´ÎÏêÏ¸ĞŞ¸ÄÄÚÈİµÄdiff  
-git log -p -2       # ²é¿´×î½üÁ½´ÎÏêÏ¸ĞŞ¸ÄÄÚÈİµÄdiff  
-git log --stat      #²é¿´Ìá½»Í³¼ÆĞÅÏ¢  
- 
+æŸ¥çœ‹ã€æ·»åŠ ã€æäº¤ã€åˆ é™¤ã€æ‰¾å›ï¼Œé‡ç½®ä¿®æ”¹æ–‡ä»¶
+
+git help <command>  # æ˜¾ç¤ºcommandçš„help
+git show            # æ˜¾ç¤ºæŸæ¬¡æäº¤çš„å†…å®¹
+git show $id
+
+git co  -- <file>   # æŠ›å¼ƒå·¥ä½œåŒºä¿®æ”¹
+git co  .           # æŠ›å¼ƒå·¥ä½œåŒºä¿®æ”¹
+
+git add <file>      # å°†å·¥ä½œæ–‡ä»¶ä¿®æ”¹æäº¤åˆ°æœ¬åœ°æš‚å­˜åŒº
+git add .           # å°†æ‰€æœ‰ä¿®æ”¹è¿‡çš„å·¥ä½œæ–‡ä»¶æäº¤æš‚å­˜åŒº
+
+git rm <file>       # ä»ç‰ˆæœ¬åº“ä¸­åˆ é™¤æ–‡ä»¶
+git rm <file> --cached  # ä»ç‰ˆæœ¬åº“ä¸­åˆ é™¤æ–‡ä»¶ï¼Œä½†ä¸åˆ é™¤æ–‡ä»¶
+
+git reset <file>    # ä»æš‚å­˜åŒºæ¢å¤åˆ°å·¥ä½œæ–‡ä»¶
+git reset -- .      # ä»æš‚å­˜åŒºæ¢å¤åˆ°å·¥ä½œæ–‡ä»¶
+git reset --hard    # æ¢å¤æœ€è¿‘ä¸€æ¬¡æäº¤è¿‡çš„çŠ¶æ€ï¼Œå³æ”¾å¼ƒä¸Šæ¬¡æäº¤åçš„æ‰€æœ‰æœ¬æ¬¡ä¿®æ”¹
+
+git ci <file>
+git ci .
+git ci -a           # å°†git add, git rmå’Œgit ciç­‰æ“ä½œéƒ½åˆå¹¶åœ¨ä¸€èµ·åš
+git ci -am "some comments"
+git ci --amend      # ä¿®æ”¹æœ€åä¸€æ¬¡æäº¤è®°å½•
+
+git revert <$id>    # æ¢å¤æŸæ¬¡æäº¤çš„çŠ¶æ€ï¼Œæ¢å¤åŠ¨ä½œæœ¬èº«ä¹Ÿåˆ›å»ºäº†ä¸€æ¬¡æäº¤å¯¹è±¡
+git revert HEAD     # æ¢å¤æœ€åä¸€æ¬¡æäº¤çš„çŠ¶æ€
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+æŸ¥çœ‹æ–‡ä»¶diff
+
+git diff <file>     # æ¯”è¾ƒå½“å‰æ–‡ä»¶å’Œæš‚å­˜åŒºæ–‡ä»¶å·®å¼‚
+git diff
+git diff <$id1> <$id2>   # æ¯”è¾ƒä¸¤æ¬¡æäº¤ä¹‹é—´çš„å·®å¼‚
+git diff <branch1>..<branch2> # åœ¨ä¸¤ä¸ªåˆ†æ”¯ä¹‹é—´æ¯”è¾ƒ
+git diff --staged   # æ¯”è¾ƒæš‚å­˜åŒºå’Œç‰ˆæœ¬åº“å·®å¼‚
+git diff --cached   # æ¯”è¾ƒæš‚å­˜åŒºå’Œç‰ˆæœ¬åº“å·®å¼‚
+git diff --stat     # ä»…ä»…æ¯”è¾ƒç»Ÿè®¡ä¿¡æ¯
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+
+æŸ¥çœ‹æäº¤è®°å½•
+
+git log
+git log <file>      # æŸ¥çœ‹è¯¥æ–‡ä»¶æ¯æ¬¡æäº¤è®°å½•
+git log -p <file>   # æŸ¥çœ‹æ¯æ¬¡è¯¦ç»†ä¿®æ”¹å†…å®¹çš„diff
+git log -p -2       # æŸ¥çœ‹æœ€è¿‘ä¸¤æ¬¡è¯¦ç»†ä¿®æ”¹å†…å®¹çš„diff
+git log --stat      #æŸ¥çœ‹æäº¤ç»Ÿè®¡ä¿¡æ¯
+
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
 tig
-MacÉÏ¿ÉÒÔÊ¹ÓÃtig´úÌædiffºÍlog£¬brew install tig
-
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
- 
-È¡µÃGit²Ö¿â
-
-#³õÊ¼»¯Ò»¸ö°æ±¾²Ö¿â  
-git init  
-  
-#CloneÔ¶³Ì°æ±¾¿â  
-git clone git@xbc.me:wordpress.git  
-  
-#Ìí¼ÓÔ¶³Ì°æ±¾¿âorigin£¬Óï·¨Îª git remote add [shortname] [url]  
-git remote add origin git@xbc.me:wordpress.git  
-  
-#²é¿´Ô¶³Ì²Ö¿â  
-git remote -v  
- 
-Ìá½»ÄãµÄĞŞ¸Ä
-
-#Ìí¼Óµ±Ç°ĞŞ¸ÄµÄÎÄ¼şµ½Ôİ´æÇø  
-git add .  
-  
-#Èç¹ûÄã×Ô¶¯×·×ÙÎÄ¼ş£¬°üÀ¨ÄãÒÑ¾­ÊÖ¶¯É¾³ıµÄ£¬×´Ì¬ÎªDeletedµÄÎÄ¼ş  
-git add -u  
-  
-#Ìá½»ÄãµÄĞŞ¸Ä  
-git commit ¨Cm "ÄãµÄ×¢ÊÍ"  
-  
-#ÍÆËÍÄãµÄ¸üĞÂµ½Ô¶³Ì·şÎñÆ÷,Óï·¨Îª git push [Ô¶³ÌÃû] [±¾µØ·ÖÖ§]:[Ô¶³Ì·ÖÖ§]  
-git push origin master  
-  
-#²é¿´ÎÄ¼ş×´Ì¬  
-git status  
-  
-#¸ú×ÙĞÂÎÄ¼ş  
-git add readme.txt  
-  
-#´Óµ±Ç°¸ú×ÙÁĞ±íÒÆ³ıÎÄ¼ş£¬²¢ÍêÈ«É¾³ı  
-git rm readme.txt  
-  
-#½öÔÚÔİ´æÇøÉ¾³ı£¬±£ÁôÎÄ¼şÔÚµ±Ç°Ä¿Â¼£¬²»ÔÙ¸ú×Ù  
-git rm ¨Ccached readme.txt  
-  
-#ÖØÃüÃûÎÄ¼ş  
-git mv reademe.txt readme  
-  
-#²é¿´Ìá½»µÄÀúÊ·¼ÇÂ¼  
-git log  
-  
-#ĞŞ¸Ä×îºóÒ»´ÎÌá½»×¢ÊÍµÄ£¬ÀûÓÃ¨Camend²ÎÊı  
-git commit --amend  
-  
-#Íü¼ÇÌá½»Ä³Ğ©ĞŞ¸Ä£¬ÏÂÃæµÄÈıÌõÃüÁîÖ»»áµÃµ½Ò»¸öÌá½»¡£  
-git commit ¨Cm &quot;add readme.txt&quot;  
-git add readme_forgotten  
-git commit ¨Camend  
-  
-#¼ÙÉèÄãÒÑ¾­Ê¹ÓÃgit add .£¬½«ĞŞ¸Ä¹ıµÄÎÄ¼şa¡¢b¼Óµ½Ôİ´æÇø  
-  
-#ÏÖÔÚÄãÖ»ÏëÌá½»aÎÄ¼ş£¬²»ÏëÌá½»bÎÄ¼ş£¬Ó¦¸ÃÕâÑù  
-git reset HEAD b  
-  
-#È¡Ïû¶ÔÎÄ¼şµÄĞŞ¸Ä  
-git checkout ¨C- readme.txt  
+Macä¸Šå¯ä»¥ä½¿ç”¨tigä»£æ›¿diffå’Œlogï¼Œbrew install tig
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
- 
-²é¿´¡¢ÇĞ»»¡¢´´½¨ºÍÉ¾³ı·ÖÖ§
+å–å¾—Gitä»“åº“
 
-git br -r           # ²é¿´Ô¶³Ì·ÖÖ§  
-git br <new_branch> # ´´½¨ĞÂµÄ·ÖÖ§  
-git br -v           # ²é¿´¸÷¸ö·ÖÖ§×îºóÌá½»ĞÅÏ¢  
-git br --merged     # ²é¿´ÒÑ¾­±»ºÏ²¢µ½µ±Ç°·ÖÖ§µÄ·ÖÖ§  
-git br --no-merged  # ²é¿´ÉĞÎ´±»ºÏ²¢µ½µ±Ç°·ÖÖ§µÄ·ÖÖ§  
-   
-git co <branch>     # ÇĞ»»µ½Ä³¸ö·ÖÖ§  
-git co -b <new_branch> # ´´½¨ĞÂµÄ·ÖÖ§£¬²¢ÇÒÇĞ»»¹ıÈ¥  
-git co -b <new_branch> <branch>  # »ùÓÚbranch´´½¨ĞÂµÄnew_branch  
-   
-git co $id          # °ÑÄ³´ÎÀúÊ·Ìá½»¼ÇÂ¼checkout³öÀ´£¬µ«ÎŞ·ÖÖ§ĞÅÏ¢£¬ÇĞ»»µ½ÆäËû·ÖÖ§»á×Ô¶¯É¾³ı  
-git co $id -b <new_branch>  # °ÑÄ³´ÎÀúÊ·Ìá½»¼ÇÂ¼checkout³öÀ´£¬´´½¨³ÉÒ»¸ö·ÖÖ§  
-   
-git br -d <branch>  # É¾³ıÄ³¸ö·ÖÖ§  
-git br -D <branch>  # Ç¿ÖÆÉ¾³ıÄ³¸ö·ÖÖ§ (Î´±»ºÏ²¢µÄ·ÖÖ§±»É¾³ıµÄÊ±ºòĞèÒªÇ¿ÖÆ) 
+#åˆå§‹åŒ–ä¸€ä¸ªç‰ˆæœ¬ä»“åº“
+git init
 
+#Cloneè¿œç¨‹ç‰ˆæœ¬åº“
+git clone git@xbc.me:wordpress.git
 
+#æ·»åŠ è¿œç¨‹ç‰ˆæœ¬åº“originï¼Œè¯­æ³•ä¸º git remote add [shortname] [url]
+git remote add origin git@xbc.me:wordpress.git
 
--------------------------------------------------------------------------------
-------------------------------------------------------------------------------- 
+#æŸ¥çœ‹è¿œç¨‹ä»“åº“
+git remote -v
 
+æäº¤ä½ çš„ä¿®æ”¹
 
- 
-·ÖÖ§ºÏ²¢ºÍrebase
+#æ·»åŠ å½“å‰ä¿®æ”¹çš„æ–‡ä»¶åˆ°æš‚å­˜åŒº
+git add .
 
-git merge <branch>               # ½«branch·ÖÖ§ºÏ²¢µ½µ±Ç°·ÖÖ§  
-git merge origin/master --no-ff  # ²»ÒªFast-FowardºÏ²¢£¬ÕâÑù¿ÉÒÔÉú³ÉmergeÌá½»  
-   
-git rebase master <branch>       # ½«master rebaseµ½branch£¬Ïàµ±ÓÚ£º  
-git co <branch> && git rebase master && git co master && git merge <branch>  
+#å¦‚æœä½ è‡ªåŠ¨è¿½è¸ªæ–‡ä»¶ï¼ŒåŒ…æ‹¬ä½ å·²ç»æ‰‹åŠ¨åˆ é™¤çš„ï¼ŒçŠ¶æ€ä¸ºDeletedçš„æ–‡ä»¶
+git add -u
 
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
- 
-Git²¹¶¡¹ÜÀí(·½±ãÔÚ¶àÌ¨»úÆ÷ÉÏ¿ª·¢Í¬²½Ê±ÓÃ)
+#æäº¤ä½ çš„ä¿®æ”¹
+git commit â€“m "ä½ çš„æ³¨é‡Š"
 
-git diff > ../sync.patch         # Éú³É²¹¶¡  
-git apply ../sync.patch          # ´ò²¹¶¡  
-git apply --check ../sync.patch  #²âÊÔ²¹¶¡ÄÜ·ñ³É¹¦  
+#æ¨é€ä½ çš„æ›´æ–°åˆ°è¿œç¨‹æœåŠ¡å™¨,è¯­æ³•ä¸º git push [è¿œç¨‹å] [æœ¬åœ°åˆ†æ”¯]:[è¿œç¨‹åˆ†æ”¯]
+git push origin master
 
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
- 
-GitÔİ´æ¹ÜÀí
+#æŸ¥çœ‹æ–‡ä»¶çŠ¶æ€
+git status
 
-git stash                        # Ôİ´æ  
-git stash list                   # ÁĞËùÓĞstash  
-git stash apply                  # »Ö¸´Ôİ´æµÄÄÚÈİ  
-git stash drop                   # É¾³ıÔİ´æÇø  
+#è·Ÿè¸ªæ–°æ–‡ä»¶
+git add readme.txt
 
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
- 
-GitÔ¶³Ì·ÖÖ§¹ÜÀí
+#ä»å½“å‰è·Ÿè¸ªåˆ—è¡¨ç§»é™¤æ–‡ä»¶ï¼Œå¹¶å®Œå…¨åˆ é™¤
+git rm readme.txt
 
-git pull                         # ×¥È¡Ô¶³Ì²Ö¿âËùÓĞ·ÖÖ§¸üĞÂ²¢ºÏ²¢µ½±¾µØ  
-git pull --no-ff                 # ×¥È¡Ô¶³Ì²Ö¿âËùÓĞ·ÖÖ§¸üĞÂ²¢ºÏ²¢µ½±¾µØ£¬²»Òª¿ì½øºÏ²¢  
-git fetch origin                 # ×¥È¡Ô¶³Ì²Ö¿â¸üĞÂ  
-git merge origin/master          # ½«Ô¶³ÌÖ÷·ÖÖ§ºÏ²¢µ½±¾µØµ±Ç°·ÖÖ§  
-git co --track origin/branch     # ¸ú×ÙÄ³¸öÔ¶³Ì·ÖÖ§´´½¨ÏàÓ¦µÄ±¾µØ·ÖÖ§  
-git co -b <local_branch> origin/<remote_branch>  # »ùÓÚÔ¶³Ì·ÖÖ§´´½¨±¾µØ·ÖÖ§£¬¹¦ÄÜÍ¬ÉÏ  
-   
-git push                         # pushËùÓĞ·ÖÖ§  
-git push origin master           # ½«±¾µØÖ÷·ÖÖ§ÍÆµ½Ô¶³ÌÖ÷·ÖÖ§  
-git push -u origin master        # ½«±¾µØÖ÷·ÖÖ§ÍÆµ½Ô¶³Ì(ÈçÎŞÔ¶³ÌÖ÷·ÖÖ§Ôò´´½¨£¬ÓÃÓÚ³õÊ¼»¯Ô¶³Ì²Ö¿â)  
-git push origin <local_branch>   # ´´½¨Ô¶³Ì·ÖÖ§£¬ originÊÇÔ¶³Ì²Ö¿âÃû  
-git push origin <local_branch>:<remote_branch>  # ´´½¨Ô¶³Ì·ÖÖ§  
-git push origin :<remote_branch>  #ÏÈÉ¾³ı±¾µØ·ÖÖ§(git br -d <branch>)£¬È»ºóÔÙpushÉ¾³ıÔ¶³Ì·ÖÖ§  
- 
+#ä»…åœ¨æš‚å­˜åŒºåˆ é™¤ï¼Œä¿ç•™æ–‡ä»¶åœ¨å½“å‰ç›®å½•ï¼Œä¸å†è·Ÿè¸ª
+git rm â€“cached readme.txt
+
+#é‡å‘½åæ–‡ä»¶
+git mv reademe.txt readme
+
+#æŸ¥çœ‹æäº¤çš„å†å²è®°å½•
+git log
+
+#ä¿®æ”¹æœ€åä¸€æ¬¡æäº¤æ³¨é‡Šçš„ï¼Œåˆ©ç”¨â€“amendå‚æ•°
+git commit --amend
+
+#å¿˜è®°æäº¤æŸäº›ä¿®æ”¹ï¼Œä¸‹é¢çš„ä¸‰æ¡å‘½ä»¤åªä¼šå¾—åˆ°ä¸€ä¸ªæäº¤ã€‚
+git commit â€“m &quot;add readme.txt&quot;
+git add readme_forgotten
+git commit â€“amend
+
+#å‡è®¾ä½ å·²ç»ä½¿ç”¨git add .ï¼Œå°†ä¿®æ”¹è¿‡çš„æ–‡ä»¶aã€båŠ åˆ°æš‚å­˜åŒº
+
+#ç°åœ¨ä½ åªæƒ³æäº¤aæ–‡ä»¶ï¼Œä¸æƒ³æäº¤bæ–‡ä»¶ï¼Œåº”è¯¥è¿™æ ·
+git reset HEAD b
+
+#å–æ¶ˆå¯¹æ–‡ä»¶çš„ä¿®æ”¹
+git checkout â€“- readme.txt
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
-»ù±¾µÄ·ÖÖ§¹ÜÀí
-#´´½¨Ò»¸ö·ÖÖ§  
-git branch iss53  
-  
-#ÇĞ»»¹¤×÷Ä¿Â¼µ½iss53  
-git chekcout iss53  
-  
-#½«ÉÏÃæµÄÃüÁîºÏÔÚÒ»Æğ£¬´´½¨iss53·ÖÖ§²¢ÇĞ»»µ½iss53  
-git chekcout ¨Cb iss53  
-  
-#ºÏ²¢iss53·ÖÖ§£¬µ±Ç°¹¤×÷Ä¿Â¼Îªmaster  
-git merge iss53  
-  
-#ºÏ²¢Íê³Éºó£¬Ã»ÓĞ³öÏÖ³åÍ»£¬É¾³ıiss53·ÖÖ§  
-git branch ¨Cd iss53  
-  
-#À­È¥Ô¶³Ì²Ö¿âµÄÊı¾İ£¬Óï·¨Îª git fetch [remote-name]  
-git fetch  
-  
-#fetch »áÀ­È¥×îĞÂµÄÔ¶³Ì²Ö¿âÊı¾İ£¬µ«²»»á×Ô¶¯µ½µ±Ç°Ä¿Â¼ÏÂ£¬Òª×Ô¶¯ºÏ²¢  
-git pull  
+
+æŸ¥çœ‹ã€åˆ‡æ¢ã€åˆ›å»ºå’Œåˆ é™¤åˆ†æ”¯
+
+git br -r           # æŸ¥çœ‹è¿œç¨‹åˆ†æ”¯
+git br <new_branch> # åˆ›å»ºæ–°çš„åˆ†æ”¯
+git br -v           # æŸ¥çœ‹å„ä¸ªåˆ†æ”¯æœ€åæäº¤ä¿¡æ¯
+git br --merged     # æŸ¥çœ‹å·²ç»è¢«åˆå¹¶åˆ°å½“å‰åˆ†æ”¯çš„åˆ†æ”¯
+git br --no-merged  # æŸ¥çœ‹å°šæœªè¢«åˆå¹¶åˆ°å½“å‰åˆ†æ”¯çš„åˆ†æ”¯
+
+git co <branch>     # åˆ‡æ¢åˆ°æŸä¸ªåˆ†æ”¯
+git co -b <new_branch> # åˆ›å»ºæ–°çš„åˆ†æ”¯ï¼Œå¹¶ä¸”åˆ‡æ¢è¿‡å»
+git co -b <new_branch> <branch>  # åŸºäºbranchåˆ›å»ºæ–°çš„new_branch
+
+git co $id          # æŠŠæŸæ¬¡å†å²æäº¤è®°å½•checkoutå‡ºæ¥ï¼Œä½†æ— åˆ†æ”¯ä¿¡æ¯ï¼Œåˆ‡æ¢åˆ°å…¶ä»–åˆ†æ”¯ä¼šè‡ªåŠ¨åˆ é™¤
+git co $id -b <new_branch>  # æŠŠæŸæ¬¡å†å²æäº¤è®°å½•checkoutå‡ºæ¥ï¼Œåˆ›å»ºæˆä¸€ä¸ªåˆ†æ”¯
+
+git br -d <branch>  # åˆ é™¤æŸä¸ªåˆ†æ”¯
+git br -D <branch>  # å¼ºåˆ¶åˆ é™¤æŸä¸ªåˆ†æ”¯ (æœªè¢«åˆå¹¶çš„åˆ†æ”¯è¢«åˆ é™¤çš„æ—¶å€™éœ€è¦å¼ºåˆ¶)
+
 
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-  
-#²é¿´Ô¶³Ì²Ö¿âµÄĞÅÏ¢  
-git remote show origin  
-  
-#½¨Á¢±¾µØµÄdev·ÖÖ§×·×ÙÔ¶³Ì²Ö¿âµÄdevelop·ÖÖ§  
-git checkout ¨Cb dev origin/develop  
- 
-GitÔ¶³Ì²Ö¿â¹ÜÀí
 
-git remote -v                    # ²é¿´Ô¶³Ì·şÎñÆ÷µØÖ·ºÍ²Ö¿âÃû³Æ  
-git remote show origin           # ²é¿´Ô¶³Ì·şÎñÆ÷²Ö¿â×´Ì¬  
-git remote add origin git@ github:robbin/robbin_site.git         # Ìí¼ÓÔ¶³Ì²Ö¿âµØÖ·  
-git remote set-url origin git@ github.com:robbin/robbin_site.git # ÉèÖÃÔ¶³Ì²Ö¿âµØÖ·(ÓÃÓÚĞŞ¸ÄÔ¶³Ì²Ö¿âµØÖ·)  
-git remote rm <repository>       # É¾³ıÔ¶³Ì²Ö¿â  
- 
-´´½¨Ô¶³Ì²Ö¿â
 
-git clone --bare robbin_site robbin_site.git  # ÓÃ´ø°æ±¾µÄÏîÄ¿´´½¨´¿°æ±¾²Ö¿â  
-scp -r my_project.git git@ git.csdn.net:~      # ½«´¿²Ö¿âÉÏ´«µ½·şÎñÆ÷ÉÏ  
-   
-mkdir robbin_site.git && cd robbin_site.git && git --bare init # ÔÚ·şÎñÆ÷´´½¨´¿²Ö¿â  
-git remote add origin git@ github.com:robbin/robbin_site.git    # ÉèÖÃÔ¶³Ì²Ö¿âµØÖ·  
-git push -u origin master                                      # ¿Í»§¶ËÊ×´ÎÌá½»  
-git push -u origin develop  # Ê×´Î½«±¾µØdevelop·ÖÖ§Ìá½»µ½Ô¶³Ìdevelop·ÖÖ§£¬²¢ÇÒtrack  
-   
-git remote set-head origin master   # ÉèÖÃÔ¶³Ì²Ö¿âµÄHEADÖ¸Ïòmaster·ÖÖ§  
- 
-Ò²¿ÉÒÔÃüÁîÉèÖÃ¸ú×ÙÔ¶³Ì¿âºÍ±¾µØ¿â
+
+åˆ†æ”¯åˆå¹¶å’Œrebase
+
+git merge <branch>               # å°†branchåˆ†æ”¯åˆå¹¶åˆ°å½“å‰åˆ†æ”¯
+git merge origin/master --no-ff  # ä¸è¦Fast-Fowardåˆå¹¶ï¼Œè¿™æ ·å¯ä»¥ç”Ÿæˆmergeæäº¤
+
+git rebase master <branch>       # å°†master rebaseåˆ°branchï¼Œç›¸å½“äºï¼š
+git co <branch> && git rebase master && git co master && git merge <branch>
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+Gitè¡¥ä¸ç®¡ç†(æ–¹ä¾¿åœ¨å¤šå°æœºå™¨ä¸Šå¼€å‘åŒæ­¥æ—¶ç”¨)
+
+git diff > ../sync.patch         # ç”Ÿæˆè¡¥ä¸
+git apply ../sync.patch          # æ‰“è¡¥ä¸
+git apply --check ../sync.patch  #æµ‹è¯•è¡¥ä¸èƒ½å¦æˆåŠŸ
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+Gitæš‚å­˜ç®¡ç†
+
+git stash                        # æš‚å­˜
+git stash list                   # åˆ—æ‰€æœ‰stash
+git stash apply                  # æ¢å¤æš‚å­˜çš„å†…å®¹
+git stash drop                   # åˆ é™¤æš‚å­˜åŒº
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+Gitè¿œç¨‹åˆ†æ”¯ç®¡ç†
+
+git pull                         # æŠ“å–è¿œç¨‹ä»“åº“æ‰€æœ‰åˆ†æ”¯æ›´æ–°å¹¶åˆå¹¶åˆ°æœ¬åœ°
+git pull --no-ff                 # æŠ“å–è¿œç¨‹ä»“åº“æ‰€æœ‰åˆ†æ”¯æ›´æ–°å¹¶åˆå¹¶åˆ°æœ¬åœ°ï¼Œä¸è¦å¿«è¿›åˆå¹¶
+git fetch origin                 # æŠ“å–è¿œç¨‹ä»“åº“æ›´æ–°
+git merge origin/master          # å°†è¿œç¨‹ä¸»åˆ†æ”¯åˆå¹¶åˆ°æœ¬åœ°å½“å‰åˆ†æ”¯
+git co --track origin/branch     # è·Ÿè¸ªæŸä¸ªè¿œç¨‹åˆ†æ”¯åˆ›å»ºç›¸åº”çš„æœ¬åœ°åˆ†æ”¯
+git co -b <local_branch> origin/<remote_branch>  # åŸºäºè¿œç¨‹åˆ†æ”¯åˆ›å»ºæœ¬åœ°åˆ†æ”¯ï¼ŒåŠŸèƒ½åŒä¸Š
+
+git push                         # pushæ‰€æœ‰åˆ†æ”¯
+git push origin master           # å°†æœ¬åœ°ä¸»åˆ†æ”¯æ¨åˆ°è¿œç¨‹ä¸»åˆ†æ”¯
+git push -u origin master        # å°†æœ¬åœ°ä¸»åˆ†æ”¯æ¨åˆ°è¿œç¨‹(å¦‚æ— è¿œç¨‹ä¸»åˆ†æ”¯åˆ™åˆ›å»ºï¼Œç”¨äºåˆå§‹åŒ–è¿œç¨‹ä»“åº“)
+git push origin <local_branch>   # åˆ›å»ºè¿œç¨‹åˆ†æ”¯ï¼Œ originæ˜¯è¿œç¨‹ä»“åº“å
+git push origin <local_branch>:<remote_branch>  # åˆ›å»ºè¿œç¨‹åˆ†æ”¯
+git push origin :<remote_branch>  #å…ˆåˆ é™¤æœ¬åœ°åˆ†æ”¯(git br -d <branch>)ï¼Œç„¶åå†pushåˆ é™¤è¿œç¨‹åˆ†æ”¯
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+åŸºæœ¬çš„åˆ†æ”¯ç®¡ç†
+#åˆ›å»ºä¸€ä¸ªåˆ†æ”¯
+git branch iss53
+
+#åˆ‡æ¢å·¥ä½œç›®å½•åˆ°iss53
+git chekcout iss53
+
+#å°†ä¸Šé¢çš„å‘½ä»¤åˆåœ¨ä¸€èµ·ï¼Œåˆ›å»ºiss53åˆ†æ”¯å¹¶åˆ‡æ¢åˆ°iss53
+git chekcout â€“b iss53
+
+#åˆå¹¶iss53åˆ†æ”¯ï¼Œå½“å‰å·¥ä½œç›®å½•ä¸ºmaster
+git merge iss53
+
+#åˆå¹¶å®Œæˆåï¼Œæ²¡æœ‰å‡ºç°å†²çªï¼Œåˆ é™¤iss53åˆ†æ”¯
+git branch â€“d iss53
+
+#æ‹‰å»è¿œç¨‹ä»“åº“çš„æ•°æ®ï¼Œè¯­æ³•ä¸º git fetch [remote-name]
+git fetch
+
+#fetch ä¼šæ‹‰å»æœ€æ–°çš„è¿œç¨‹ä»“åº“æ•°æ®ï¼Œä½†ä¸ä¼šè‡ªåŠ¨åˆ°å½“å‰ç›®å½•ä¸‹ï¼Œè¦è‡ªåŠ¨åˆå¹¶
+git pull
+
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+#æŸ¥çœ‹è¿œç¨‹ä»“åº“çš„ä¿¡æ¯
+git remote show origin
+
+#å»ºç«‹æœ¬åœ°çš„devåˆ†æ”¯è¿½è¸ªè¿œç¨‹ä»“åº“çš„developåˆ†æ”¯
+git checkout â€“b dev origin/develop
+
+Gitè¿œç¨‹ä»“åº“ç®¡ç†
+
+git remote -v                    # æŸ¥çœ‹è¿œç¨‹æœåŠ¡å™¨åœ°å€å’Œä»“åº“åç§°
+git remote show origin           # æŸ¥çœ‹è¿œç¨‹æœåŠ¡å™¨ä»“åº“çŠ¶æ€
+git remote add origin git@ github:robbin/robbin_site.git         # æ·»åŠ è¿œç¨‹ä»“åº“åœ°å€
+git remote set-url origin git@ github.com:robbin/robbin_site.git # è®¾ç½®è¿œç¨‹ä»“åº“åœ°å€(ç”¨äºä¿®æ”¹è¿œç¨‹ä»“åº“åœ°å€)
+git remote rm <repository>       # åˆ é™¤è¿œç¨‹ä»“åº“
+
+åˆ›å»ºè¿œç¨‹ä»“åº“
+
+git clone --bare robbin_site robbin_site.git  # ç”¨å¸¦ç‰ˆæœ¬çš„é¡¹ç›®åˆ›å»ºçº¯ç‰ˆæœ¬ä»“åº“
+scp -r my_project.git git@ git.csdn.net:~      # å°†çº¯ä»“åº“ä¸Šä¼ åˆ°æœåŠ¡å™¨ä¸Š
+
+mkdir robbin_site.git && cd robbin_site.git && git --bare init # åœ¨æœåŠ¡å™¨åˆ›å»ºçº¯ä»“åº“
+git remote add origin git@ github.com:robbin/robbin_site.git    # è®¾ç½®è¿œç¨‹ä»“åº“åœ°å€
+git push -u origin master                                      # å®¢æˆ·ç«¯é¦–æ¬¡æäº¤
+git push -u origin develop  # é¦–æ¬¡å°†æœ¬åœ°developåˆ†æ”¯æäº¤åˆ°è¿œç¨‹developåˆ†æ”¯ï¼Œå¹¶ä¸”track
+
+git remote set-head origin master   # è®¾ç½®è¿œç¨‹ä»“åº“çš„HEADæŒ‡å‘masteråˆ†æ”¯
+
+ä¹Ÿå¯ä»¥å‘½ä»¤è®¾ç½®è·Ÿè¸ªè¿œç¨‹åº“å’Œæœ¬åœ°åº“
 
 git branch --set-upstream master origin/master  
 git branch --set-upstream develop origin/develop  

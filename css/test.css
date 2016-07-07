@@ -1,0 +1,894 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none
+}
+
+ol, ul, li, dl {
+    list-style: none
+}
+
+body, button, input, section, select, textarea {
+    font: 12px/18px "微软雅黑", "Microsoft JhengHei", "WenQuanYi Micro Hei", "Helvetica Neue", Verdana, Arial, Helvetica, sans-serif
+}
+
+body {
+    background: #fff;
+}
+
+img, .one img {
+    width: 100%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both
+}
+
+.text-align_C {
+    text-align: center
+}
+
+.m_t_10 {
+    margin-top: 10px;
+}
+
+.m_t_50 {
+    margin-top: 50px
+}
+
+.m_b_70 {
+    margin-bottom: 70px;
+}
+
+.p_d {
+    padding: 0 10px;
+}
+
+.hide {
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*nav log*/
+header {
+    position: relative;
+    width: 100%;
+    z-index: 999999999999999
+}
+
+.logo {
+    position: relative;
+    z-index: 123;
+    font: 18px verdana;
+    color: #6DDB07;
+    float: left;
+    width: 140px;
+    background: url(../images/logo.png) 0% 50% no-repeat;
+    background-size: 30%;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+}
+
+.logo img {
+    width: 100%
+}
+
+.logo a {
+    color: #6DDB07;
+}
+
+nav {
+    position: relative;
+    width: 860px;
+    margin: 0 auto;
+}
+
+#cssmenu:after, #cssmenu > ul:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+#cssmenu #head-mobile {
+    display: none
+}
+
+#cssmenu {
+    font-size: 12px;
+}
+
+#cssmenu ul {
+    position: fixed;
+    top: 20px;
+    margin-left: 123px
+}
+
+#cssmenu ul li {
+    float: left;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    margin-left: 2px;
+}
+
+#container {
+    margin: 0 auto;
+    width: 860px
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0px;
+}
+
+#cssmenu a {
+    background: none;
+    color: #333
+}
+
+#cssmenu .current a, #cssmenu ul li a:hover {
+    background-color: rgba(242, 152, 105, 0.6);
+    color: #fff;
+    width: 90px;
+    float: left;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+}
+
+.section { /*border-bottom:5px solid #ccc;min-height:60vh;*/
+    padding: 0px 0px
+}
+
+.section p:last-child {
+    margin-bottom: 0
+}
+
+.section-wrapper {
+    margin-top: -68px;
+    padding-top: 68px
+}
+
+.section-wrapper:first-child .section {
+    padding-top: 0px
+}
+
+/*in_banner*/
+.in_banner {
+    height: 670px;
+    float: left;
+    width: 100%;
+    background: url(../images/in_banner.jpg) 100% 100% no-repeat;
+}
+
+.banner_top {
+    margin-top: 120px;
+}
+
+.banner_top2 {
+    margin-top: 190px;
+}
+
+.in_B_L_iphone {
+    width: 41.45%;
+}
+
+.in_B_R_other {
+    width: 50%;
+}
+
+.seww {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    position: static;
+    bottom: 0px;
+}
+
+.r_top_1 {
+    width: 100%;
+}
+
+.xiao1 {
+    width: 65%;
+}
+
+.c1 {
+    margin-bottom: 12%;
+}
+
+.r_top_2 {
+    width: 43%;
+    text-align: center
+}
+
+.twrf {
+    padding: 0px
+}
+
+/*global h3 hr title*/
+.business h3, .jiage h3, .brand h3, .nursing h3, .goddess h3, .contact h3, .news h3 {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    color: #333
+}
+
+.business hr, .jiage hr, .brand hr, .nursing hr, .goddess hr, .contact hr, .news hr {
+    height: 3px;
+    margin: 0 auto;
+    width: 100px;
+    margin-top: 8px;
+}
+
+.business_title, .jiage_title, .brand_title, .nursing_title, .goddess_title, .contact_title, .news_title {
+    padding: 50px 0;
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.business hr, .nursing hr {
+    background: #ffcdb4
+}
+
+.jiage hr, .contact hr, .news hr {
+    background: #333
+}
+
+.brand hr, .goddess hr {
+    background: #c2e5ed
+}
+
+/*business   包月换衣　一次三件　无限换穿*/
+.index_business {
+    background: url(../images/index_business.png);
+    height: 240px;
+    float: left;
+    width: 100%
+}
+
+.index_business_pic {
+    margin: 20px;
+    background: #fff;
+    width: 820px;
+    height: 200px;
+}
+
+.index_business h2 {
+    font-size: 26px;
+    line-height: 100px;
+    text-align: center;
+    font-weight: normal;
+    float: left;
+    width: 100%;
+}
+
+ul.index_business_pic_list li {
+    float: left;
+    width: 33.3333%;
+    text-align: center
+}
+
+ul.index_business_pic_list li h3 {
+    font-size: 14px;
+    color: #333;
+    float: left;
+    width: 100%;
+    letter-spacing: 0px;
+    text-align: center
+}
+
+ul.index_business_pic_list li p {
+    text-align: center;
+    font-size: 12px;
+    padding: 0 20%;
+    line-height: 21px;
+    margin-top: 10px;
+    float: left;
+}
+
+/*global 背景*/
+.jiage, .nursing, .contact {
+    width: 100%;
+    height: 800px;
+    margin: auto;
+    background: url(../images/mk_Price.jpg) 50% 100% no-repeat;
+}
+
+.nursing {
+    height: 730px;
+    background: #f3d3d8 url(../images/index_nursing_bj.jpg) 100% 0% no-repeat;
+    background-size: 250%
+}
+
+.contact {
+    height: 600px;
+    background: url(../images/index_contact_bj.jpg) 50% 100%
+}
+
+/*jijage  价格*/
+.jiage_idw h3 {
+    text-align: center;
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600
+}
+
+ul.jiage_idw li {
+    text-align: center;
+    padding: 10px 0px
+}
+
+ul.jiage_idw li p {
+    color: #ff9a89
+}
+
+/*brand 品牌*/
+.mk_brand {
+    width: 100%;
+    margin: auto;
+    padding: 50px 0;
+    border-bottom: 1px #e1e1e1 solid;
+}
+
+/*nursing  清洗护理*/
+ul.nursing_1 {
+    margin-left: -1%;
+}
+
+ul.nursing_1 li {
+    float: left;
+    width: 32.3333%;
+    margin: 1% 0 0 1%;
+    color: #3d3d3d;
+    background: #fff
+}
+
+ul.nursing_1 li img {
+    width: 100%;
+    display: block
+}
+
+ul.nursing_1 li p {
+    margin: 0 auto;
+    width: 100%;
+    padding: 12px 0 20px 0;
+    text-align: center;
+    line-height: 20px
+}
+
+ul.nursing_1 li i {
+    position: relative;
+    top: 4PX;
+    font-size: 20px;
+    margin-right: 5px;
+    color: #ff9a8a
+}
+
+/*goddess 女神*/
+ul.goddess_1 {
+    margin-left: -2%;
+}
+
+ul.goddess_1 li {
+    float: left;
+    width: 32.3333%;
+    margin: 1% 0 0 1%;
+    height: 450px;
+    color: #3d3d3d;
+    background: #f7fdff;
+    border-bottom: 2px #b6e1ec solid;
+}
+
+ul.goddess_1 li img {
+    width: 100%;
+    display: block
+}
+
+ul.goddess_1 li h3 {
+    line-height: 20px;
+    height: 20px;
+    color: #8ec6d4;
+    font-size: 17px;
+}
+
+ul.goddess_1 li h4 {
+    line-height: 30px;
+    color: #b5b7b8;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+ul.goddess_1 li p {
+    line-height: 18px;
+    color: #333;
+    font-size: 12px;
+    text-indent: 2em;
+}
+
+/*information 行业资讯*/
+.news_right ul li {
+    float: left;
+    width: 100%;
+    height: 100px;
+}
+
+.news_right ul li img {
+    width: 150px;
+    height: 86px
+}
+
+.right_content {
+    padding-left: 160px;
+}
+
+.right_content p {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 15px;
+}
+
+.in_information {
+    width: 48%;
+}
+
+.news_right {
+    width: 50%;
+}
+
+/*contact 联系*/
+.index_left_contact {
+    width: 47%;
+    background: #fff;
+    padding: 2%
+}
+
+.index_left_contact h2 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+.index_left_contact hr {
+    height: 2px;
+    width: 120px;
+    background: #000;
+    margin-top: 4px;
+    float: left;
+}
+
+.index_left_contact p {
+    line-height: 18px;
+    color: #333;
+    font-size: 12px;
+    text-indent: 2em;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.index_right_contact {
+    width: 45%;
+    height: 300px;
+}
+
+ul.in_r_c li {
+    float: left;
+    width: 100%;
+    color: #333;
+    line-height: 25px;
+    padding: 15px 0;
+    background: #fff;
+    margin-bottom: 6px;
+    padding-left: 12px;
+    font-size: 12px;
+}
+
+ul.in_r_c li br {
+    line-height: 28px;
+}
+
+/*footer*/
+footer {
+    padding: 20px 0;
+}
+
+footer p {
+    text-align: center;
+    line-height: 26px;
+}
+
+footer p a {
+    line-height: 31px;
+    color: #000;
+    text-decoration: underline;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 870px) {
+    .m_t_50 {
+        margin-top: 0px;
+    }
+
+    .m_b_70 {
+        margin-bottom: 20px;
+    }
+
+    #container, .jiage_idw {
+        margin: 0 auto;
+        width: 94%
+    }
+
+    .content {
+        height: auto;
+    }
+
+    /*m nav*/
+    #cssmenu ul li a {
+        display: block
+    }
+
+    #cssmenu ul li a:hover,
+    #cssmenu .current a {
+        color: #fff;
+        width: 100%;
+        float: left;
+    }
+
+    #cssmenu ul {
+        float: left;
+        width: 100%;
+        top: 0px;
+        margin-left: 0;
+        display: none;
+        height: auto;
+        background: #fff;
+        margin-top: 39px;
+        z-index: 9
+    }
+
+    #cssmenu ul li {
+        float: left;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        color: #fff;
+        border-top: 1px solid #efefef;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: left;
+        padding: 0px 0 0 0;
+        float: none;
+        background: #fff
+    }
+
+    .yes_logo {
+        padding-left: 10px;
+        background: #fff url(../images/logo2.png) 12px 50% no-repeat;
+        background-size: 100px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .button {
+        width: 55px;
+        height: 46px;
+        position: absolute;
+        right: 0;
+        top: -4px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .button:after {
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        display: block;
+        height: 4px;
+        width: 20px;
+        border-top: 2px solid #f29869;
+        border-bottom: 2px solid #f29869;
+        content: ''
+    }
+
+    .button:before {
+        -webkit-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        transition: all .3s ease;
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        display: block;
+        height: 2px;
+        width: 20px;
+        background: #f29869;
+        content: ''
+    }
+
+    .button.menu-opened:after {
+        -webkit-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        transition: all .3s ease;
+        top: 23px;
+        border: 0;
+        height: 2px;
+        width: 19px;
+        background: #333;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+    .button.menu-opened:before {
+        top: 23px;
+        background: #333;
+        width: 19px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+
+    /*in_banner*/
+    .in_banner {
+        height: auto;
+        background: url(../images/in_banner.jpg) 100% 0% no-repeat;
+    }
+
+    .banner_top {
+        margin-top: 16%;
+    }
+
+    .banner_top2 {
+        margin-top: 24%;
+    }
+
+    .in_B_L_iphone {
+        width: 43%;
+        padding-left: 1%
+    }
+
+    .in_B_R_other {
+        width: 50%;
+    }
+
+    /*right*/
+    .seww {
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        position: static;
+        bottom: 0px;
+    }
+
+    .r_top_1 {
+        width: 100%;
+    }
+
+    .xiao1 {
+        width: 65%;
+    }
+
+    .c1 {
+        margin-bottom: 12%;
+    }
+
+    .r_top_2 {
+        width: 46%;
+        text-align: center
+    }
+
+    .twrf {
+        padding: 0px 1% 0 0
+    }
+
+    /*global h3 hr title*/
+    .business h3, .jiage h3, .brand h3, .nursing h3, .goddess h3, .contact h3 {
+        font-size: 18px;
+    }
+
+    .business hr, .jiage hr, .brand hr, .nursing hr, .goddess hr, .contact hr {
+        width: 70px;
+        margin-top: 1px;
+        height: 2px;
+    }
+
+    .business_title, .jiage_title, .brand_title, .nursing_title, .goddess_title, .contact_title {
+        padding: 30px 0;
+        clear: both;
+        display: block;
+        width: 100%;
+    }
+
+    .section-wrapper:first-child .section {
+        padding-top: 0px
+    }
+
+    /*business   包月换衣　一次三件　无限换穿*/
+    .index_business {
+        background: none;
+        height: auto;
+    }
+
+    .index_business_pic {
+        margin: 20px 0 0 0;
+        width: auto;
+        height: 220px;
+        border: 10px #ffe6d9 solid;
+    }
+
+    .index_business h2 {
+        display: none
+    }
+
+    ul.index_business_pic_list li {
+        width: 100%
+    }
+
+    ul.index_business_pic_list li h3 {
+        margin-top: 12px;
+    }
+
+    ul.index_business_pic_list li p {
+        padding: 0 0%;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    /*global 背景*/
+    .nursing {
+        height: auto;
+        float: left;
+        padding-bottom: 20px;
+        background: url(../images/index_nursing_bj.jpg) 100% 0% no-repeat;
+        background-size: 250%;
+        background: #ffe6d9
+    }
+
+    /*jijage  价格*/
+    .jiage_title {
+        padding: 20px 0;
+    }
+
+    .jiage {
+        height: auto;
+        background: #d2ecf2;
+        padding: 0 0 10px 0
+    }
+
+    .jiage_idw h3 {
+        line-height: 18px;
+    }
+
+    ul.jiage_idw {
+        padding: 0 10px;
+    }
+
+    ul.jiage_idw li {
+        font-size: 11px;
+    }
+
+    /*brand 品牌*/
+    .mk_brand {
+        padding: 25px 0;
+    }
+
+    /*nursing  清洗护理*/
+    ul.nursing_1 {
+        margin-left: -2%;
+    }
+
+    ul.nursing_1 li {
+        width: 48%;
+        margin: 2% 0 0 2%;
+    }
+
+    ul.nursing_1 li p {
+        padding: 12px 0;
+        height: auto;
+    }
+
+    /*goddess 女神*/
+    ul.goddess_1 {
+        margin-left: -0%;
+    }
+
+    ul.goddess_1 li {
+        width: 100%;
+        margin: 0% 0 0 0%;
+        height: auto;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    ul.goddess_1 li h3 {
+        font-size: 14px;
+    }
+
+    ul.goddess_1 li p {
+        margin-bottom: 10px;
+    }
+
+    /*information 行业资讯*/
+    .in_information, .news_right {
+        width: 100%;
+    }
+
+    .dts_top {
+        margin-top: 15px;
+    }
+
+    /*contact 联系*/
+    .contact {
+        height: auto;
+        padding-bottom: 10px;
+        background: #ffe6d9; /*url(../images/m_contact.png) 100% 20%;*/
+        float: left
+    }
+
+    .index_left_contact {
+        width: 100%;
+        padding: 4%;
+    }
+
+    .index_right_contact {
+        width: 100%;
+        padding: 0 4%;
+        height: auto;
+        margin-top: 10px;
+        float: left;
+        background: #fff
+    }
+
+    ul.in_r_c li {
+        padding: 12px 0;
+        margin-bottom: 0px;
+        border-bottom: 1px #d2d2d2 solid;
+    }
+
+    ul.in_r_c li br {
+        line-height: 28px;
+    }
+}

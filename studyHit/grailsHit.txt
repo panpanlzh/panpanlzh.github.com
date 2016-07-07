@@ -2,7 +2,7 @@ grails create-app racetrack
 
 grails run-app
 
-grails create-domain-class Race ´´½¨ÁìÓòÀà (Èç¹ûÖ®Ç°µÄÓ¦ÓÃ»¹ÔÚÔËĞĞ£¬ÇëÏÈ°´Control-CÍ£Ö¹Ëü)
+grails create-domain-class Race åˆ›å»ºé¢†åŸŸç±» (å¦‚æœä¹‹å‰çš„åº”ç”¨è¿˜åœ¨è¿è¡Œï¼Œè¯·å…ˆæŒ‰Control-Cåœæ­¢å®ƒ)
 
 
 grails --debug-jvm run-app
@@ -11,7 +11,7 @@ grails --debug-jvm run-app
 
 
 ===========================================================
-sqlserverÅäÖÃ¿ªÊ¼
+sqlserveré…ç½®å¼€å§‹
 ===========================================================
 compile fileTree(dir:'lib',include:'*.jar')
 driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
@@ -80,13 +80,13 @@ environments:
                     defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
 
 ===========================================================
-sqlserverÅäÖÃ½áÊø
+sqlserveré…ç½®ç»“æŸ
 ===========================================================
 
 
 
 ===========================================================
-postgresqlÅäÖÃ¿ªÊ¼
+postgresqlé…ç½®å¼€å§‹
 ===========================================================
 dataSource:
     pooled: true
@@ -132,7 +132,7 @@ environments:
 
 runtime  "org.postgresql:postgresql:9.4-1204-jdbc42"
 ===========================================================
-postgresqlÅäÖÃ½áÊø
+postgresqlé…ç½®ç»“æŸ
 ===========================================================
 
 
@@ -140,33 +140,33 @@ postgresqlÅäÖÃ½áÊø
 
 
 ===========================================================
-mysqlÅäÖÃ¿ªÊ¼
+mysqlé…ç½®å¼€å§‹
 ===========================================================
 driverClassName: com.mysql.jdbc.Driver
 url: jdbc:mysql://localhost:3306/juling
 
 runtime 'mysql:mysql-connector-java:5.1.29'
 ===========================================================
-mysqlÅäÖÃ½áÊø
+mysqlé…ç½®ç»“æŸ
 ===========================================================
 
 
 
 ===========================================================
-oracleÅäÖÃ¿ªÊ¼
+oracleé…ç½®å¼€å§‹
 ===========================================================
 driverClassName: oracle.jdbc.driver.OracleDriver
 url: jdbc:oracle:thin:@localhost:1521:lookup
 
 ===========================================================
-oracleÅäÖÃ½áÊø
+oracleé…ç½®ç»“æŸ
 ===========================================================
 
-¶¨Ê±Æ÷
+å®šæ—¶å™¨
 http://grails-plugins.github.io/grails-quartz/snapshot/guide/triggers.html
 
 
-ÔÚÏßHTTP POST/GET½Ó¿Ú²âÊÔ¹¤¾ß - aToolÔÚÏß¹¤¾ß
+åœ¨çº¿HTTP POST/GETæ¥å£æµ‹è¯•å·¥å…· - aToolåœ¨çº¿å·¥å…·
 http://www.atool.org/httptest.php
 
 

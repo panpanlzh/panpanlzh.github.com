@@ -28,60 +28,60 @@ cd /Applications/apache-tomcat-8.0.30/bin
 cat catalina.out
 
 more xx.text
-ctrl+f (ÏòÏÂ¹öÒ»ÆÁ)
-ctrl+B (ÏòÉÏ¹öÒ»ÆÁ)
+ctrl+f (å‘ä¸‹æ»šä¸€å±)
+ctrl+B (å‘ä¸Šæ»šä¸€å±)
 
 
 vi xx.text
-vim 
-i»òÕße (½øÈë±à¼­Ä£Ê½)
-dd É¾³ı¹â±êËùÔÚĞĞ
-xÉ¾³ıÒ»¸ö×Ö·û
-esc £¨½øÈëÒ»°ãÄ£Ê½£©
-: (½øÈëÃüÁîÄ£Ê½)
-q! ²»±£´æÍË³ö
-wq ±£´æ²¢ÍË³ö
-x ±£´æ²¢ÍË³ö
+vim
+iæˆ–è€…e (è¿›å…¥ç¼–è¾‘æ¨¡å¼)
+dd åˆ é™¤å…‰æ ‡æ‰€åœ¨è¡Œ
+xåˆ é™¤ä¸€ä¸ªå­—ç¬¦
+esc ï¼ˆè¿›å…¥ä¸€èˆ¬æ¨¡å¼ï¼‰
+: (è¿›å…¥å‘½ä»¤æ¨¡å¼)
+q! ä¸ä¿å­˜é€€å‡º
+wq ä¿å­˜å¹¶é€€å‡º
+x ä¿å­˜å¹¶é€€å‡º
 
-find / -name pg_hba.conf 
+find / -name pg_hba.conf
 
-ps -ef | grep tomcat | grep -v grep²é½ø³Ì
-kill 4063É±½ø³Ì
+ps -ef | grep tomcat | grep -v grepæŸ¥è¿›ç¨‹
+kill 4063æ€è¿›ç¨‹
 
 
-ftpÏà¹Ø: 
-	¼ì²é°²×°vsftpdÈí¼ş:
+ftpç›¸å…³:
+	æ£€æŸ¥å®‰è£…vsftpdè½¯ä»¶:
 	#rpm -qa |grep vsftpd
 
-	°²×°: 
+	å®‰è£…:
 	#yum install vsftpd -y
 
-	Æô¶¯ftpÃüÁî#service vsftpd start
-	Í£Ö¹ftpÃüÁî#service vsftpd stop
-	ÖØÆôftpÃüÁî#service vsftpd restart
-        ²é¿´ftp×´Ì¬#service vsftpd status
+	å¯åŠ¨ftpå‘½ä»¤#service vsftpd start
+	åœæ­¢ftpå‘½ä»¤#service vsftpd stop
+	é‡å¯ftpå‘½ä»¤#service vsftpd restart
+        æŸ¥çœ‹ftpçŠ¶æ€#service vsftpd status
 
 
-	½¨ÓÃ»§£ºÔÚrootÓÃ»§ÏÂ£º
-	useradd -d /home/test test //Ôö¼ÓÓÃ»§test£¬²¢ÖÆ¶¨testÓÃ»§µÄÖ÷Ä¿Â¼Îª/home/test
-	passwd test //ÎªtestÉèÖÃÃÜÂë
+	å»ºç”¨æˆ·ï¼šåœ¨rootç”¨æˆ·ä¸‹ï¼š
+	useradd -d /home/test test //å¢åŠ ç”¨æˆ·testï¼Œå¹¶åˆ¶å®štestç”¨æˆ·çš„ä¸»ç›®å½•ä¸º/home/test
+	passwd test //ä¸ºtestè®¾ç½®å¯†ç 
 
-	¸ü¸ÄÓÃ»§ÏàÓ¦µÄÈ¨ÏŞÉèÖÃ£º
-	usermod -s /sbin/nologin test //ÏŞ¶¨ÓÃ»§test²»ÄÜtelnet£¬Ö»ÄÜftp
-	usermod -s /sbin/bash test //ÓÃ»§test»Ö¸´Õı³£
-	usermod -d /test test //¸ü¸ÄÓÃ»§testµÄÖ÷Ä¿Â¼Îª/test
+	æ›´æ”¹ç”¨æˆ·ç›¸åº”çš„æƒé™è®¾ç½®ï¼š
+	usermod -s /sbin/nologin test //é™å®šç”¨æˆ·testä¸èƒ½telnetï¼Œåªèƒ½ftp
+	usermod -s /sbin/bash test //ç”¨æˆ·testæ¢å¤æ­£å¸¸
+	usermod -d /test test //æ›´æ”¹ç”¨æˆ·testçš„ä¸»ç›®å½•ä¸º/test
 
 
-·À»ğÇ½Ïà¹Ø:
-        service iptables status¿ÉÒÔ²é¿´µ½iptables·şÎñµÄµ±Ç°×´Ì¬¡£
-        ¹ØÓÚÆô¶¯ºÍ¹Ø±Õ·À»ğÇ½µÄÃüÁî:
-		1) ÖØÆôºóÉúĞ§
-		¿ªÆô£º chkconfig iptables on
-		¹Ø±Õ£º chkconfig iptables off
-		2) ¼´Ê±ÉúĞ§£¬ÖØÆôºóÊ§Ğ§
-		¿ªÆô£º service iptables start
-		¹Ø±Õ£º service iptables stop
-	²é¿´iptables¹æÔò¼°±àºÅ
+é˜²ç«å¢™ç›¸å…³:
+        service iptables statuså¯ä»¥æŸ¥çœ‹åˆ°iptablesæœåŠ¡çš„å½“å‰çŠ¶æ€ã€‚
+        å…³äºå¯åŠ¨å’Œå…³é—­é˜²ç«å¢™çš„å‘½ä»¤:
+		1) é‡å¯åç”Ÿæ•ˆ
+		å¼€å¯ï¼š chkconfig iptables on
+		å…³é—­ï¼š chkconfig iptables off
+		2) å³æ—¶ç”Ÿæ•ˆï¼Œé‡å¯åå¤±æ•ˆ
+		å¼€å¯ï¼š service iptables start
+		å…³é—­ï¼š service iptables stop
+	æŸ¥çœ‹iptablesè§„åˆ™åŠç¼–å·
 	iptables -nL
 
 

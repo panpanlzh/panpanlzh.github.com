@@ -1,0 +1,9 @@
+获取自定义属性
+document.getElementById("mm").getAttribute("displayName");
+document.getElementById("mm").attributes["displayName"].nodeValue
+$("mm").attr("displayName")
+
+设置自定义属性：
+document.getElementById("mm").setAttribute("displayName")="111";
+document.getElementById("mm").atttributes["displayName"].nodeValue="111";
+$("mm").attr("displayName","111")
