@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,mininum-scale=1.0,user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,mininum-scale=1.0,user-scalable=no">
     <title>123net响应式</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/index.css">
@@ -10,9 +11,9 @@
 </head>
 <body>
 <header>
-    <div class="header clearfix">
-        <a href="#" class="logo"></a>
-        <div class="button"></div>
+    <div class="header">
+        <a href="#" class="logo left"></a>
+        <a class="btn open"></a>
         <ul>
             <li class="on"><a href="#">首页</a></li>
             <li><a href="#">如何包月换衣</a></li>
@@ -25,15 +26,27 @@
         </ul>
     </div>
 </header>
-<div class="banner"></div>
+<div class="banner">
+    <div class="container">
+        <div class="app"><img src="images/in_B_L_iphone.png"></div>
+        <div class="erweima">
+            <div><a href="#"><img src="images/0.png"></a></div>
+            <a href="#"><img src="images/r.png"></a>
+            <a href="#"><img src="images/l.png"></a>
+        </div>
+    </div>
+</div>
+<div class="service_cnt"></div>
+<div class="service_rgl"></div>
+<div class="service_fee"></div>
+<div class="brand"></div>
+<div class="care_step"></div>
+<div class="goddess"></div>
+<div class="info"></div>
+<div class="contact_us"></div>
+<footer></footer>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<script type="text/javascript">
-    $(".header .button").click(function(){
-        $(".header ul").slideToggle('fast');
-    });
-    $(window).resize(function(){
-        if($(".header ul").is(":hidden")) $(".header ul").show();
-    });
-</script>
 </body>
 </html>
