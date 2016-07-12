@@ -7,3 +7,7 @@ $("mm").attr("displayName")
 document.getElementById("mm").setAttribute("displayName")="111";
 document.getElementById("mm").atttributes["displayName"].nodeValue="111";
 $("mm").attr("displayName","111")
+
+函数的两种定义方式:
+function A() {};  /*函数的声明是在执行期前定义的，所以可以后在置声明*/ 
+var A = function() {};  /*函数的声明是在执行期定义的，所以必须前置定义*/ 

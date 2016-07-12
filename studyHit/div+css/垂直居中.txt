@@ -1,0 +1,23 @@
+1、父级高度固定
+#parent{
+            height: 300px;
+            width: 200px;
+            background: #7d7d7d;
+            position: relative;
+        }
+   #child{
+            width: 50%;
+            background: green;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            margin: auto;
+            height: 50%;
+        }
+2、
+   #parent{
+            display:table;
+        }
+   #child{
+            display:table-cell; 
+            vertical-align:middle;
+        }
