@@ -12,47 +12,87 @@
 	            
 	    chart: {
 	        polar: true,
-	        type: 'line'
+	        type: 'area'
+	        //type: 'line'	       
 	    },
 	    
 	    title: {
-	        text: '',
-	        x: -80
+	        text: '66.42',
+	        floating:true,
+	        align: 'center',
+	        verticalAlign:'middle',
+	        y: 1,
+	        x: 10,
+	        style: {                    // 标签样式，会继承和重写上层全局样式		           		            
+		            color: 'red',
+		            fontSize: '24px',
+		            fontWeight: 'bold',
+		            fontFamily: ''		             
+		        }
 	    },
 	    
 	    pane: {
-	    	size: '80%'
+	    	size: '80%'	    
 	    },
 	    
-	    xAxis: {
+	    xAxis: {	        
 	        categories: ['经验值', '收益率', '抗风险', '稳定性', '择时能力 '],
 	        tickmarkPlacement: 'on',
-	        lineWidth: 0
+	        lineWidth: 0	        
 	    },
 	        
 	    yAxis: {
 	        gridLineInterpolation: 'polygon',
 	        lineWidth: 0,
-	        min: 0
+	        min: 0,
+	        labels: {
+                enabled: false
+            }
 	    },
 	    
-	    tooltip: {
+	    tooltip: {	  
+	        headerFormat:'',
 	    	shared: true,
-	        pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
-	    },
+	        pointFormat: '<span style="color:{series.color}"><b>{point.category}</b></span>:{point.y}<br/>{point.hint}'
+	   },
 	    
 	    legend: {
-	        align: 'right',
-	        verticalAlign: 'top',
-	        y: 70,
-	        layout: 'vertical'
-	    },
-	    
+	        enabled: false	        
+	    },	  
+		plotOptions: {
+            series: {
+                fillColor: {
+                    linearGradient: [0, 0, 0, 300],
+                    stops: [
+                        [0, Highcharts.getOptions().colors[0]],
+                        [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                    ]
+                }
+            }
+        },
+
 	    series: [{
-	        name: 'Allocated Budget',
-	        data: [69.50, 83.40, 81.10, 51.50, 56.10],
+		    data:[{		     
+			    hint : "a反应基金经理对市场的判断",					   
+			    y : 69.50
+			}, {			  
+			    hint : "b反应基金经理对市场的判断",			
+			    y : 83.40
+			}	, {			  
+			    hint : "c反应基金经理对市场的判断",			    
+			    y : 81.10
+			}, {			   
+			    hint : "d反应基金经理对市场的判断",			  
+			    y : 51.50
+			}, {		    
+			    hint : "e反应基金经理对市场的判断",			   
+			    y : 56.10
+			}], 
 	        pointPlacement: 'on'
-	    }]
+	    }],
+	    credits:{
+				enabled:false // 禁用版权信息
+		}
 	
 	});
 });
@@ -60,6 +100,6 @@
   </script>
 </head>
 <body>
-  <div id="container" style="min-width:700px;height:400px"></div>
+  <div id="container" style="width:300px;height:200px;display:inline-block;margin:200px;"></div>
 </body>
 </html>

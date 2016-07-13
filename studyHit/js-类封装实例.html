@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <script type="text/javascript" src="../divcss_123net_rs/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript">
+
+        function ShapeBase() {
+
+        }
+        function Rect() {
+
+        }
+        ShapeBase.prototype = {
+            show: function () {
+                alert("ShapeBase show");
+            },
+            init: function () {
+                alert("ShapeBase init");
+            },
+            initialize: function () {
+                this.oninit();
+            }
+        }
+        ShapeBase.staticDraw = function () {
+            alert("staticDraw");
+        };
+//        Rect.prototype = ShapeBase.prototype;
+        Rect.prototype = $(new ShapeBase()).extend({
+            //添加新的方法
+            add: function () {
+                alert("Rect add");
+            },
+            //使用这种方法可以重写show方法
+            show: function () {
+                alert("Rect show");
+            },
+            //实现虚方法
+            oninit: function () {
+                alert("Rect oninit");
+            }
+        });
+
+        $(function () {
+            ShapeBase.staticDraw();
+            var s = new ShapeBase();
+            s.show();
+            //alert("ShapeBase show")
+            s.init();
+            var r = new Rect();
+            r.show();
+            //alert("Rect show")
+            r.add();
+            r.initialize();
+            //有问题,无法实现 alert("Rect oninit")
+        })
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
