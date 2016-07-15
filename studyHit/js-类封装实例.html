@@ -7,42 +7,44 @@
     <script type="text/javascript">
 
         function ShapeBase() {
-
+            this.mm = "a";
+            this.nn;
         }
         function Rect() {
 
         }
         ShapeBase.prototype = {
             show: function () {
-                alert("ShapeBase show");
+                // alert("ShapeBase show");
             },
             init: function () {
-                alert("ShapeBase init");
+                //alert("ShapeBase init");
             },
             initialize: function () {
                 this.oninit();
             }
         }
         ShapeBase.staticDraw = function () {
-            alert("staticDraw");
+            //alert("staticDraw");
         };
-//        Rect.prototype = ShapeBase.prototype;
+        //        Rect.prototype = ShapeBase.prototype;
         Rect.prototype = $(new ShapeBase()).extend({
             //添加新的方法
             add: function () {
-                alert("Rect add");
+                // alert("Rect add");
             },
             //使用这种方法可以重写show方法
             show: function () {
-                alert("Rect show");
+                //alert("Rect show");
             },
             //实现虚方法
             oninit: function () {
-                alert("Rect oninit");
+                //alert("Rect oninit");
             }
         });
 
         $(function () {
+
             ShapeBase.staticDraw();
             var s = new ShapeBase();
             s.show();
@@ -52,8 +54,10 @@
             r.show();
             //alert("Rect show")
             r.add();
-            r.initialize();
+//            r.initialize();
             //有问题,无法实现 alert("Rect oninit")
+
+
         })
 
 
