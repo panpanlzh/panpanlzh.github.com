@@ -43,22 +43,23 @@
             }
         });
 
-        $(function () {
+         $(function () {
+             ShapeBase.staticDraw();
 
-            ShapeBase.staticDraw();
-            var s = new ShapeBase();
-            s.show();
-            //alert("ShapeBase show")
-            s.init();
-            var r = new Rect();
-            r.show();
-            //alert("Rect show")
-            r.add();
-//            r.initialize();
-            //有问题,无法实现 alert("Rect oninit")
-
+             var s = new ShapeBase();
+             s.show();
+             //alert("ShapeBase show")
+             s.init();
+             var r = new Rect();
+             r.show();
+             //alert("Rect show")
+             r.add();
+             //            r.initialize();
+             //有问题,无法实现 alert("Rect oninit")
 
         })
+
+
 
 
     </script>
