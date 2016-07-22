@@ -1,5 +1,3 @@
-
-
 /*头部区域*/
 header {
     background: rgba(255, 255, 255, 0.95);
@@ -50,7 +48,7 @@ header .header, .container {
 
 /*头部区域----end*/
 
-.service_rgl img, .banner,.brand img,.clean img,.banner .app img,.goddess img {
+.service_rgl img, .banner, .brand img, .clean img, .banner .app img, .goddess img {
     width: 100%;
 }
 
@@ -88,7 +86,7 @@ header .header, .container {
 /*banner区域---end*/
 
 .section_m {
-    margin: 60px auto;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -109,9 +107,10 @@ header .header, .container {
     margin: 8px auto 0;
 }
 
-.service_rgl h2{
+.service_rgl h2 {
     padding: 0;
 }
+
 .service_rgl h2:after, .clean h2:after {
     background-color: #ffcdb4;
 }
@@ -123,11 +122,13 @@ header .header, .container {
 .service_fee h2:after, .contact_us h2:after {
     background-color: #000;
 }
-.orange_p{
+
+.orange_p {
     color: #ff9a89;
 }
+
 /*.black_p{*/
-    /*color: #c2e5ed;*/
+/*color: #c2e5ed;*/
 /*}*/
 
 /*包月换衣　一次三件　无限换穿*/
@@ -182,56 +183,68 @@ header .header, .container {
 /*包月换衣　一次三件　无限换穿---end*/
 
 /*如何包月换衣费用-----*/
-.service_fee{
+.service_fee {
     background: url("../images/mk_Price.jpg") no-repeat top center;
     height: 800px;
 }
-.service_fee h3{
+
+.service_fee h3 {
     color: #333;
     font-size: 16px;
     margin: 9px auto;
 }
-.service_fee p:nth-of-type(1),.service_fee p:nth-last-of-type(1){
+
+.service_fee p:nth-of-type(1), .service_fee p:nth-last-of-type(1) {
     padding-bottom: 30px;
 }
+
 /*如何包月换衣费用-----end*/
 
+.brand h2, .goddess h2, .info h2 {
+    padding-top: 0;
+}
+
 /*品牌-----*/
-.brand div{
-   border-bottom: 1px solid #ccc;
+.brand div {
+    border-bottom: 1px solid #ccc;
     padding-top: 50px;
     padding-bottom: 50px;
 }
-.brand div:last-child{
+
+.brand div:last-child {
     border-bottom: 0;
     padding-bottom: 0;
 }
+
 /*品牌-----end*/
 
 /*清洗护理-----*/
-.clean{
+.clean {
     background: #fff url(../images/index_nursing_bj.jpg) no-repeat right top;
     background-size: 100% 100%;
 }
-.clean li{
+
+.clean li {
     float: left;
     width: 32%;
     margin: 0 1% 1% 0;
     padding-bottom: 20px;
 }
 
-.clean p{
+.clean p {
     background-color: #fff;
     height: 50px;
     line-height: 50px;
 }
-.clean p:after{
+
+.clean p:after {
     /*content: '\e900';*/
 }
+
 /*清洗护理-----end*/
 
 /*衣二三女神-----*/
-.goddess li{
+.goddess li {
     float: left;
     width: 32%;
     margin: 0 1% 1% 0;
@@ -240,7 +253,8 @@ header .header, .container {
     border-bottom: 2px #b6e1ec solid;
     text-align: left;
 }
-.goddess li h3{
+
+.goddess li h3 {
     line-height: 30px;
     height: 30px;
     color: #8ec6d4;
@@ -248,30 +262,121 @@ header .header, .container {
     text-indent: 10px;
 
 }
-.goddess li div{
-    text-indent:10px;
+
+.goddess li div {
+    text-indent: 10px;
     line-height: 20px;
     color: #333;
     height: 78px;
     overflow: hidden;
 }
-.goddess li .source{
+
+.goddess li .source {
     line-height: 30px;
     color: #b5b7b8;
     font-size: 12px;
     font-weight: normal;
-    text-indent:10px;
+    text-indent: 10px;
 }
+
 /*衣二三女神-----end*/
+
+/*行业资讯-----*/
+.info img {
+    float: left;
+    margin-right: 20px;
+}
+
+.info li img {
+    margin-right: 10px;
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #333;
+}
+
+.info i {
+    color: #333;
+    font-size: 12px;
+}
+
+/*行业资讯-----end*/
+
+/*联系我们-----*/
+.contact_us {
+    background: url(../images/index_contact_bj.jpg) no-repeat center;
+    padding-bottom: 45px;
+}
+
+.contact_us .leftContent {
+    float: left;
+    background: #fff;
+    width: 45%;
+}
+
+.contact_us .rightContent {
+    float: right;
+    width: 45%;
+}
+
+.contact_us .leftContent img {
+    width: 90%;
+    margin: 4% 0;
+}
+
+.contact_us .leftContent p, .contact_us .leftContent h3 {
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contact_us .leftContent h3:after {
+    display: block;
+    background: #000;
+    width: 130px;
+    height: 2px;
+    content: '';
+    margin: 3px 0px 10px 1px;
+}
+
+.contact_us .leftContent p {
+    text-indent: 25px;
+    margin-bottom: 11px;
+    line-height: 19px;
+    color: #333;
+}
+
+.contact_us .rightContent {
+    line-height: 24px;
+}
+
+.contact_us .rightContent li {
+    margin-bottom: 8px;
+    /*line-height: 24px;*/
+    background: #fff;
+    padding: 13px 0 14px 12px;
+    color: #333;
+    text-align: left;
+}
+
+.contact_us .rightContent li span {
+    color: #ff9a89;
+}
+
+/*联系我们-----end*/
 
 @media (max-width: 767px) {
 
-    header .header, .header ul, .header li, .service_cnt .box_cnt dl {
+    header .header, .header ul, .header li, .service_cnt .box_cnt dl, .info .info_b img {
         width: 100%;
     }
 
     .container {
-        width: 90%;
+        width: 96%;
     }
 
     /*头部区域*/
@@ -424,39 +529,93 @@ header .header, .container {
         background-image: none;
         height: auto;
     }
-    .service_fee p:nth-of-type(1),.service_fee p:nth-last-of-type(1){
+
+    .service_fee p:nth-of-type(1), .service_fee p:nth-last-of-type(1) {
         padding-bottom: 18px;
     }
-    /*如何包月换衣费用-----end*/
 
+    /*如何包月换衣费用-----end*/
     /*品牌-----*/
-    .brand div{
+    .brand div {
         padding-top: 6%;
         padding-bottom: 6%;
     }
-    /*品牌-----end*/
 
+    /*品牌-----end*/
     /*清洗护理----*/
-    .clean{
+    .clean {
         background-image: none;
         background-color: #ffe6d9;;
         padding-bottom: 10px;
     }
-    .clean li{
+
+    .clean li {
         width: 48%;
         margin: 0 2% 2% 0;
     }
-    /*清洗护理----end*/
 
+    /*清洗护理----end*/
     /*衣二三女神-----*/
-    .goddess li{
+    .goddess li {
         width: 100%;
         margin-bottom: 20px;
         height: auto;
         padding-bottom: 10px;
     }
-    .goddess li div{
+
+    .goddess li div {
         height: 45px;
     }
+
     /*衣二三女神-----end*/
+    /*行业资讯-----*/
+    .info ul {
+        margin-top: 10px;
+    }
+
+    .info li {
+        height: 98px;
+    }
+
+    .info li:last-child {
+        height: 84px;
+    }
+
+    .info p {
+        max-height: 45px;
+        overflow: hidden;
+    }
+
+    .info img {
+        float: none;
+        margin-right: 0;
+    }
+
+    .info li img {
+        float: left;
+    }
+
+    /*行业资讯-----end*/
+    /*联系我们-----*/
+    .contact_us{
+        background-image: none;
+        background-color: #ffe6d9;
+    }
+    .contact_us .leftContent, .contact_us .rightContent {
+        width: 100%;
+    }
+    .contact_us .rightContent{
+        background-color: #fff;
+        margin-top: 10px;
+    }
+    .contact_us .rightContent li{
+        border-bottom: 1px #d2d2d2 solid;
+        margin-left: 25px;
+        padding: 8px 0 8px 12px;
+        background: none;
+    }
+    .contact_us .rightContent li:last-child{
+        border: 0;
+    }
+    /*联系我们-----end*/
 }

@@ -7,14 +7,15 @@
     <script type="text/javascript">
 
         function ShapeBase() {
-            this.mm = "a";
-            this.nn;
+            this.m = "1";
         }
         function Rect() {
-
+            this.n = "";
         }
         ShapeBase.prototype = {
+            constructor: ShapeBase,
             show: function () {
+                console.log(this.m + "777");
                 // alert("ShapeBase show");
             },
             init: function () {
@@ -24,9 +25,11 @@
                 this.oninit();
             }
         }
+
         ShapeBase.staticDraw = function () {
             //alert("staticDraw");
         };
+
         //        Rect.prototype = ShapeBase.prototype;
         Rect.prototype = $(new ShapeBase()).extend({
             //添加新的方法
@@ -43,22 +46,13 @@
             }
         });
 
-         $(function () {
-             ShapeBase.staticDraw();
-
-             var s = new ShapeBase();
-             s.show();
-             //alert("ShapeBase show")
-             s.init();
-             var r = new Rect();
-             r.show();
-             //alert("Rect show")
-             r.add();
-             //            r.initialize();
-             //有问题,无法实现 alert("Rect oninit")
-
+        $(function () {
+            location.href="http://www.baidu.com";
+//          var p=window.showModalDialog("m.html",
+//                  ["enter 3D point","x","y","z"],
+//                  "dialogwidth:400;dialogheight:300;resizable:yes");
+//            console.log(p);
         })
-
 
 
 
