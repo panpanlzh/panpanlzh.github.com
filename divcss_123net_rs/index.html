@@ -5,9 +5,12 @@
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,mininum-scale=1.0,user-scalable=no">
     <title>123net响应式</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/index.css">
     <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js" type="text/javascript"></script>
+    <![endif]-->
 </head>
 <body>
 <header>
@@ -16,12 +19,12 @@
         <a class="btn open"></a>
         <ul>
             <li class="on"><a href="#">首页</a></li>
-            <li><a href="#">如何包月换衣</a></li>
-            <li><a href="#">热门品牌</a></li>
-            <li><a href="#">清洗护理</a></li>
-            <li><a href="#">衣二三女神</a></li>
-            <li><a href="#">行业资讯</a></li>
-            <li><a href="#">联系我们</a></li>
+            <li><a href="#service_cnt">如何包月换衣</a></li>
+            <li><a href="#brand">热门品牌</a></li>
+            <li><a href="#clean">清洗护理</a></li>
+            <li><a href="#goddess">衣二三女神</a></li>
+            <li><a href="#info">行业资讯</a></li>
+            <li><a href="#contact_us">联系我们</a></li>
             <li><a href="#">登录/注册</a></li>
         </ul>
     </div>
@@ -36,7 +39,7 @@
         </div>
     </div>
 </div>
-<section class="container section_m service_cnt">
+<section class="container section_m" id="service_cnt">
     <div class="box_cnt">
         <h2>包月换衣　一次三件　无限换穿</h2>
         <dl>
@@ -67,43 +70,43 @@
     <p class="black_p">购买2个月包月会员，加赠1个月, 实际使用3个月</p>
     <p class="orange_p">每天10元，享受总有新衣服穿的乐趣</p>
 </section>
-<section class="container section_m brand">
+<section class="container section_m" id="brand">
     <h2 class="service_h2_bottom">热门品牌</h2>
     <div><img src="images/index_band_1.jpg"></div>
     <div><img src="images/index_band_2.jpg"></div>
     <div><img src="images/index_band_3.jpg"></div>
     <div><img src="images/index_band_4.jpg"></div>
 </section>
-<section class="section_m clean">
+<section class="section_m" id="clean">
     <h2 class="service_h2_bottom">清洗护理</h2>
     <ul class="container clearfix">
         <li>
             <img src="images/nursing_1.png">
-            <p><i>\e900</i>1.仓库严格分类分衣保管</p>
+            <p><span></span>1.仓库严格分类分衣保管</p>
         </li>
         <li>
             <img src="images/nursing_2.png">
-            <p><i>\e901</i>2.每件回收衣服都经过15道关键点检查</p>
+            <p><span></span>2.每件回收衣服都经过15道关键点检查</p>
         </li>
         <li>
             <img src="images/nursing_3.png">
-            <p><i>\e902</i>3.干洗，彻底清洁</p>
+            <p><span></span>3.干洗，彻底清洁</p>
         </li>
         <li>
             <img src="images/nursing_4.png">
-            <p><i>\e903</i>4.消毒，弱紫外线灯照</p>
+            <p><span></span>4.消毒，弱紫外线灯照</p>
         </li>
         <li>
             <img src="images/nursing_5.png">
-            <p><i>\e904</i>5.整烫，熨尽不平</p>
+            <p><span></span>5.整烫，熨尽不平</p>
         </li>
         <li>
             <img src="images/nursing_6.png">
-            <p><i>\e905</i>6.回库，等女神宠幸</p>
+            <p><span></span>6.回库，等女神宠幸</p>
         </li>
     </ul>
 </section>
-<section class="container section_m  goddess">
+<section class="container section_m" id="goddess">
     <h2 class="service_h2_bottom">衣二三女神</h2>
     <ul class="container clearfix">
         <li>
@@ -159,7 +162,7 @@
         </li>
     </ul>
 </section>
-<section class="container section_m info">
+<section class="container section_m" id="info">
     <h2 class="service_h2_bottom">行业资讯</h2>
     <div>
         <a href="#" class="info_b"><img src="images/news_0.jpg"></a>
@@ -182,7 +185,7 @@
         </ul>
     </div>
 </section>
-<section class="section_m contact_us clearfix">
+<section class="section_m clearfix" id="contact_us">
     <h2 class="service_h2_bottom">联系我们</h2>
     <div class="container">
         <div class="leftContent"><img src="images/index_left_contact.jpg">
@@ -204,9 +207,39 @@
     </div>
 
 </section>
-<footer></footer>
-<br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer id="footer">
+    <p>Copyright © 2016 yi23.net All Rights Reserved.</p>
+    <p>京ICP备15008895号-4</p>
+</footer>
+<script>
+    $(window).resize(function () {
+        $(".header ul").show();
+    });
 
+    $(window).scroll(function () {
+        var h_nav = $(".header li a");
+        var i_cur_h_nav = 0;
+        var doc_scroll_top, cur_a, next_a;
+        for (var i = 1; i < h_nav.length - 1; i++) {
+            doc_scroll_top = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            cur_a = $(h_nav[i]).attr("href");
+            next_a = "footer";
+            if (i < 6) next_a = $(h_nav[i + 1]).attr("href");
+            if (parseFloat(doc_scroll_top) >= parseFloat($(cur_a).offset().top) && parseFloat(doc_scroll_top) < parseFloat($(next_a).offset().top)) {
+                i_cur_h_nav = i;
+                break;
+            }
+        }
+        $($(".header li").get(i_cur_h_nav)).addClass("on").siblings().removeClass("on");
+    })
+
+    $(".header").delegate(".btn", "click", function () {
+        $(".header ul").toggle();
+    })
+
+    $(".header ul li").on("click", function () {
+        if (window.innerWidth <= 870)  $(".header ul").hide();
+    })
+</script>
 </body>
 </html>
