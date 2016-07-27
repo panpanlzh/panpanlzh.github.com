@@ -238,7 +238,8 @@
     })
 
     $(".header ul li").on("click", function () {
-        if (window.innerWidth <= 870)  $(".header ul").hide();
+        var w_width = window.innerWidth || document.body.clientWidth || document.documentElement.clientWidth;
+        if (w_width <= 870)  $(".header ul").hide();
     })
 </script>
 </body>

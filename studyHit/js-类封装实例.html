@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Title</title>
+    <meta charset="UTF-8">
     <script type="text/javascript" src="../divcss_123net_rs/js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript">
 
@@ -47,18 +48,135 @@
         });
 
         $(function () {
-            location.href="http://www.baidu.com";
+//            location.href="http://www.baidu.com";
 //          var p=window.showModalDialog("m.html",
 //                  ["enter 3D point","x","y","z"],
 //                  "dialogwidth:400;dialogheight:300;resizable:yes");
 //            console.log(p);
+
+
+        })
+        $(window).scroll(function () {
+//            console.log("clientLeft:"+document.getElementById("li1").clientLeft);
+//            console.log("clientTop:"+document.getElementById("li1").clientTop);
+//            console.log("pagexOffset:"+this.pageXOffset);
+//            console.log("pageyOffset:"+this.pageYOffset);
+//            console.log("scrollLeft:"+document.body.scrollLeft);
+//            console.log("scrollTop:"+document.body.scrollTop);
+
         })
 
 
-
     </script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div#a1 {
+            background-color: #5cb85c;
+            height: 800px;
+        }
+
+        div#a2 {
+            background-color: #2aabd2;
+            height: 800px;
+        }
+
+    </style>
 </head>
 <body>
+<div id="a1"></div>
+<div id="a2"></div>
+<div id="a">
+    <ul class="c1 c2">
+        <li>a</li>
+        <li id="li1">b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+        <li>e</li>
+        <li>e</li>
+        <li>e</li>
+        <li>e</li>
+    </ul>
+</div>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script type="text/javascript">
 
+
+
+
+//    $(window).scroll(function () {
+////        console.log("window.pageXOffset:" + window.pageXOffset);
+////        console.log("window.pageYOffset:" + window.pageYOffset);
+////        console.log("document.body.scrollTop:" + document.body.scrollTop);
+//        console.log("document.documentElement.scrollTop:" + document.documentElement.scrollTop);
+//        var aa=document.getElementById("a2").getBoundingClientRect();
+//        console.log(aa.top);
+//        console.log(aa.left);
+//        console.log(aa.bottom);
+//        console.log(aa.right);
+//        console.log("----------------------");
+//    })
+//    window.scrollTo(0, 800);
+
+//    var obj=document.getElementById("a2");
+//    if (obj.addEventListener)
+//        obj.addEventListener("click", function (e) {
+//            console.log(e.clientX);
+//            console.log(e.clientY);
+//            console.log(e.type);
+//            console.log("************************");
+//        }, false);
+//    else if (obj.attachEvent)
+//        obj.attachEvent("onclick", function (e) {
+//            console.log(e.clientX);
+//            console.log(e.clientY);
+//            console.log("************************");
+//        });
+
+    //    document.getElementById("a").onclick = function () {
+    //        console.log("eeee");
+    //    }
+    //    var obj = document.getElementById("li1");
+
+
+    //    if (obj.addEventListener)
+    //        obj.addEventListener(
+    //                "click", function () {
+    //                    console.log("aa");
+    //                    event.stopPropagation();
+    //                }, false
+    //        );
+    //    else if (obj.attachEvent)
+    //        obj.attachEvent("onclick", function () {
+    //            console.log("aa");
+    //            window.event.cancelBubble = true;
+    //        });
+
+
+    //    function checkLeave(){
+    //        return "确定离开当前页面吗？";
+    //    }
+
+
+    //    if (window.addEventListener)
+    //        window.addEventListener("beforeunload", function () {
+    //            event.returnValue = "要离开吗--111";
+    //        }, false);
+    //    else if (window.attachEvent)
+    //        window.attachEvent("onbeforeunload", function () {
+    //            event.returnValue = "确定要离开吗---22";
+    //        });
+
+</script>
 </body>
 </html>
