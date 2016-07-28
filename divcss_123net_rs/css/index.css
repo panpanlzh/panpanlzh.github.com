@@ -411,7 +411,7 @@ footer{
 
 @media (max-width: 870px) {
 
-    header .header, .header ul, .header li, #service_cnt .box_cnt dl, #info #info_b img {
+    header .header, .header ul, .header li, #service_cnt .box_cnt dl, #info .info_b img {
         width: 100%;
     }
 
