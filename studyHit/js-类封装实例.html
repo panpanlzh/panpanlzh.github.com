@@ -87,6 +87,11 @@
     </style>
 </head>
 <body>
+<div>
+    <h1>从时钟中拖出时间戳</h1>
+    <span id="clock"></span>
+    <textarea rows="20" cols="60"></textarea>
+</div>
 <div id="a1"></div>
 <div id="a2"></div>
 <div id="a">
@@ -110,38 +115,68 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <script type="text/javascript">
+    function fn() {
+        fn["cbnum"] = function () {
+            console.log("aaaa");
+        }
+        fn.cbnum();
+    }
 
-document.getElementById("id").classList
+    fn();
+    //    fn.cbnum();
+
+    //    $(function () {
+    //        var clock = document.getElementById("clock");
+    //        var icon = new Image();
+    //        icon.src = "logo.png";
+    //
+    //        function displayTime() {
+    //            var now = new Date();
+    //            var hrs = now.getHours(), mins = now.getMinutes();
+    //            if (mins < 10) mins = "0" + mins;
+    //            clock.innerHTML = hrs + ":" + mins;
+    //        }
+    //
+    //        displayTime();
+    //        clock.draggable = true;
+    //
+    //        clock.ondragstart = function (event) {
+    //            var event = event || window.event;
+    //            var dt = event.dataTransfer;
+    //            dt.setData("Text", this.innerHTML + "\n");
+    //            if (dt.setDragImage) dt.setDragImage(icon, 0, 0);
+    //        }
+    //    })
 
 
-//    $(window).scroll(function () {
-////        console.log("window.pageXOffset:" + window.pageXOffset);
-////        console.log("window.pageYOffset:" + window.pageYOffset);
-////        console.log("document.body.scrollTop:" + document.body.scrollTop);
-//        console.log("document.documentElement.scrollTop:" + document.documentElement.scrollTop);
-//        var aa=document.getElementById("a2").getBoundingClientRect();
-//        console.log(aa.top);
-//        console.log(aa.left);
-//        console.log(aa.bottom);
-//        console.log(aa.right);
-//        console.log("----------------------");
-//    })
-//    window.scrollTo(0, 800);
+    //    $(window).scroll(function () {
+    ////        console.log("window.pageXOffset:" + window.pageXOffset);
+    ////        console.log("window.pageYOffset:" + window.pageYOffset);
+    ////        console.log("document.body.scrollTop:" + document.body.scrollTop);
+    //        console.log("document.documentElement.scrollTop:" + document.documentElement.scrollTop);
+    //        var aa=document.getElementById("a2").getBoundingClientRect();
+    //        console.log(aa.top);
+    //        console.log(aa.left);
+    //        console.log(aa.bottom);
+    //        console.log(aa.right);
+    //        console.log("----------------------");
+    //    })
+    //    window.scrollTo(0, 800);
 
-//    var obj=document.getElementById("a2");
-//    if (obj.addEventListener)
-//        obj.addEventListener("click", function (e) {
-//            console.log(e.clientX);
-//            console.log(e.clientY);
-//            console.log(e.type);
-//            console.log("************************");
-//        }, false);
-//    else if (obj.attachEvent)
-//        obj.attachEvent("onclick", function (e) {
-//            console.log(e.clientX);
-//            console.log(e.clientY);
-//            console.log("************************");
-//        });
+    //    var obj=document.getElementById("a2");
+    //    if (obj.addEventListener)
+    //        obj.addEventListener("click", function (e) {
+    //            console.log(e.clientX);
+    //            console.log(e.clientY);
+    //            console.log(e.type);
+    //            console.log("************************");
+    //        }, false);
+    //    else if (obj.attachEvent)
+    //        obj.attachEvent("onclick", function (e) {
+    //            console.log(e.clientX);
+    //            console.log(e.clientY);
+    //            console.log("************************");
+    //        });
 
     //    document.getElementById("a").onclick = function () {
     //        console.log("eeee");

@@ -1,3 +1,4 @@
+
 获取自定义属性
 document.getElementById("mm").getAttribute("displayName");
 document.getElementById("mm").attributes["displayName"].nodeValue
