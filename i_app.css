@@ -1,0 +1,149 @@
+/*全局样式*/
+html {
+    font-size: 62.5%;
+}
+@media only screen and (min-width: 481px) and (max-width: 561px){
+    html {
+        font-size: 94%!important;
+    }
+}
+@media only screen and (min-width: 561px) and (max-width: 641px){
+    html {
+        font-size: 109%!important;
+    }
+}
+@media only screen and (min-width: 641px) and (max-width: 1200px){
+    html {
+        font-size: 125%!important;
+    }
+}
+
+body, a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+    margin: 0;
+    padding: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+body {
+    font: 16px/38px 'Microsoft YaHei', '宋体', 'Arial', 'MicrosoftJhengHei', 'sans-serif';
+    color: #000;
+    background-color: #1f2436;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+.right {
+    float: right;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    width: 100%;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header img {
+    max-width: 100%;
+}
+
+.header .dgkt {
+    background: url("images/app-dgkt-bg.png") repeat-y top center;
+    height: 200px;
+    background-size: 100%;
+    position: relative;
+}
+
+.header .dgkt ul {
+    /*margin-left: 10%;*/
+    /*padding-top: 2%;*/
+    margin-left: 3.5rem;
+    padding-top: 0.7rem;
+}
+
+.header .dgkt ul li {
+    float: left;
+    /*width: 10%;*/
+    width: 5.6rem;
+    text-align: left;
+}
+
+.header .dgkt ul li img {
+    width: 73%;
+}
+
+.dgkt .task {
+    margin: 25px 0;
+    position: relative;
+}
+
+.dgkt .task img {
+    margin-left: 24px;
+}
+
+.dgkt img.bao {
+    position: absolute;
+    top: 14px;
+    left: 630px;
+}
+
+.dgkt .task:last-child img {
+    margin-top: 26px;
+}
+
+.dgkt .task p, .dgkt .task h3 {
+    margin-left: 165px;
+}
+
+.dgkt .task h3 span {
+    font-size: 16px;
+    color: #ff0000;
+    padding-left: 32px;
+}
